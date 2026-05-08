@@ -6,7 +6,7 @@
 size = Vector2(1201, 25)
 
 [node name="TestScene" type="Node2D" unique_id=761775681]
-position = Vector2(551, 214)
+position = Vector2(278, 195)
 
 [node name="player" parent="." unique_id=1692882400 instance=ExtResource("1_f70fn")]
 platform_floor_layers = 4294901761
