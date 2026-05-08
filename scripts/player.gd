@@ -3,7 +3,7 @@ class_name Player extends CharacterBody2D
 @export var speed: float = 200.0
 @export var gravity: float = 980.0
 @export var jump_velocity: float = -400.0
-@export 
+@onready var anim: AnimatedSprite2D =$AnimatedSprite2D
 
 
 func _physics_process(delta: float) -> void:
@@ -20,3 +20,13 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
+	
+	if direction != 0:
+		anim.play("run")
+	else:
+		anim.play("idle")
+	
+	if direction < 0:
+		anim.flip_h = true
+	elif direction > 0:
+		anim.flip_h = false
