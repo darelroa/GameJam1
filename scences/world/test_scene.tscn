@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cbu7isp281n38"]
 
-[ext_resource type="PackedScene" uid="uid://d20yp5ud1whi7" path="res://scences/entities/player.tscn" id="1_f70fn"]
+[ext_resource type="PackedScene" uid="uid://d4aar6yjyiw64" path="res://scences/entities/player3.tscn" id="1_f70fn"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f70fn"]
 
 [node name="TestScene" type="Node2D" unique_id=761775681]
 position = Vector2(277, 195)
 
-[node name="player" parent="." unique_id=1692882400 instance=ExtResource("1_f70fn")]
+[node name="player3" parent="." unique_id=1692882400 instance=ExtResource("1_f70fn")]
 
 [node name="Boundary" type="StaticBody2D" parent="." unique_id=966868916]
 collision_layer = 256
