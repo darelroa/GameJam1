@@ -1,0 +1,35 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dq8pvs640rdqr"]
+
+[ext_resource type="Texture2D" uid="uid://bd4ua5hy6dysj" path="res://assets/sprites/playercharacter1/IMG_2365.PNG" id="1_fhrrk"]
+[ext_resource type="Texture2D" uid="uid://bh1dpmth4b53e" path="res://assets/sprites/playercharacter1/IMG_2366.PNG" id="2_agj3e"]
+[ext_resource type="Texture2D" uid="uid://hwqugc5lpphu" path="res://assets/sprites/playercharacter1/IMG_2367.PNG" id="3_45gw7"]
+[ext_resource type="Texture2D" uid="uid://giqw8qrkk43q" path="res://assets/sprites/playercharacter1/IMG_2368.PNG" id="4_837tv"]
+[ext_resource type="Texture2D" uid="uid://dtpav1qff8fsd" path="res://assets/sprites/playercharacter1/IMG_2369.PNG" id="5_4npxt"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fhrrk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("2_agj3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_45gw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_837tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4npxt")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]

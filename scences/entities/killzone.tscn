@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://p0fmmtm7xsrt"]
 
-[ext_resource type="Script" uid="uid://o46g4dg7v47d" path="res://scripts/killzone.gd" id="1_w1d18"]
+[ext_resource type="Script" uid="uid://dnqij7jfx7nbo" path="res://scripts/killzone.gd" id="1_w1d18"]
 
-[node name="Killzone" type="Area2D" unique_id=518670943]
-collision_mask = 2
+[node name="Killzone" type="Area2D" unique_id=1190324112]
 script = ExtResource("1_w1d18")
 
-[node name="Timer" type="Timer" parent="." unique_id=1632367749]
+[node name="Timer" type="Timer" parent="." unique_id=1871614486]
 wait_time = 0.6
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
