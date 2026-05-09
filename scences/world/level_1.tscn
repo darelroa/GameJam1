@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://j0jqfyt78ll3"]
+
+[ext_resource type="Texture2D" uid="uid://ct5wx338ev0ro" path="res://assets/sprites/leveldesign/level_one_scene.PNG" id="1_m8ikt"]
+[ext_resource type="PackedScene" path="res://scences/entities/player1.tscn" id="2_7is3k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyt8p"]
+size = Vector2(368, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt1gv"]
+size = Vector2(778, 87)
+
+[node name="level 1" type="Node2D" unique_id=989943834]
+
+[node name="LevelOneScene" type="Sprite2D" parent="." unique_id=699255470]
+position = Vector2(640, 480)
+scale = Vector2(0.64, 0.6386666)
+texture = ExtResource("1_m8ikt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2082770186]
+collision_layer = 256
+
+[node name="ground 1" type="CollisionShape2D" parent="StaticBody2D" unique_id=100418427]
+position = Vector2(185, 916)
+shape = SubResource("RectangleShape2D_eyt8p")
+
+[node name="ground 2" type="CollisionShape2D" parent="StaticBody2D" unique_id=879294359]
+position = Vector2(892, 914.5)
+shape = SubResource("RectangleShape2D_dt1gv")
+
+[node name="player1" parent="." unique_id=1692882400 instance=ExtResource("2_7is3k")]
+position = Vector2(45, 832)
