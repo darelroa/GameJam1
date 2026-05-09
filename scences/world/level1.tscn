@@ -50,7 +50,7 @@ position = Vector2(892, 914.5)
 shape = SubResource("RectangleShape2D_dt1gv")
 
 [node name="player1" parent="." unique_id=1692882400 instance=ExtResource("2_jmrgv")]
-position = Vector2(49, 814)
+position = Vector2(45, 832)
 
 [node name="Camera2D" type="Camera2D" parent="player1" unique_id=497148937]
 zoom = Vector2(1.2, 1.2)
