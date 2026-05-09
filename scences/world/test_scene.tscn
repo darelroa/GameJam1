@@ -2,17 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://d20yp5ud1whi7" path="res://scences/entities/player.tscn" id="1_f70fn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f70fn"]
-size = Vector2(1201, 25)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f70fn"]
 
 [node name="TestScene" type="Node2D" unique_id=761775681]
-position = Vector2(278, 195)
+position = Vector2(277, 195)
 
 [node name="player" parent="." unique_id=1692882400 instance=ExtResource("1_f70fn")]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=966868916]
+[node name="Boundary" type="StaticBody2D" parent="." unique_id=966868916]
 collision_layer = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=552707824]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary" unique_id=552707824]
 position = Vector2(343, 425)
-shape = SubResource("RectangleShape2D_f70fn")
+shape = SubResource("WorldBoundaryShape2D_f70fn")
