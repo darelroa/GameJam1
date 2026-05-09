@@ -5,6 +5,11 @@ class_name Player extends CharacterBody2D
 @export var jump_velocity: float = -400.0
 @onready var anim: AnimatedSprite2D =$AnimatedSprite2D
 
+func _ready() -> void:
+	var frames_path = "res://assets/sprites/movement/%s.tres" % Global.selected_player
+	anim.sprite_frames	 = load(frames_path)
+	anim.play("idle")
+
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

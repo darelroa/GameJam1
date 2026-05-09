@@ -12,8 +12,11 @@ func _process(delta: float) -> void:
 
 
 func _on_start_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scences/world/test_scene.tscn")
+	get_tree().change_scene_to_file("res://scences/world/level1.tscn")
 
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
+	
+func _on_character_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scences/menu/character_selection.tscn")
