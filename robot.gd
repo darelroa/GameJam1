@@ -5,23 +5,13 @@ extends Node2D
 
 var _timer: float = 0.0
 var _is_on: bool = false
-var _flashing: bool = false
 
 func _ready() -> void:
 	$AnimatedSprite2D.animation = "light"
 	$AnimatedSprite2D.frame = 0
-	
-	
-func start_flashing() -> void:
-	_flashing = true
 
-func stop_flashing() -> void:
-	_flashing = false
-	$AnimatedSprite2D.frame = 0
 
 func _process(delta: float) -> void:
-	if not _flashing:
-		return 
 	_timer += delta
 	if _timer >= flash_speed:
 		_timer = 0.0

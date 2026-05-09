@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://dwwfc8rbvk6cy"]
+[gd_scene format=3 uid="uid://2rscw72aot4o"]
 
 [ext_resource type="Texture2D" uid="uid://ct5wx338ev0ro" path="res://assets/sprites/leveldesign/level_one_scene.PNG" id="1_cl34l"]
 [ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="2_jmrgv"]
 [ext_resource type="PackedScene" uid="uid://p0fmmtm7xsrt" path="res://scences/entities/killzone.tscn" id="3_jmrgv"]
+[ext_resource type="PackedScene" uid="uid://ca5nmis1m4ull" path="res://scences/world/drone/drone.tscn" id="4_3j68x"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3j68x"]
 
@@ -99,3 +100,7 @@ shape = SubResource("RectangleShape2D_v32oq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="game border" unique_id=966555977]
 position = Vector2(-1037.5, -18.789146)
 shape = SubResource("RectangleShape2D_v32oq")
+
+[node name="drone" parent="." unique_id=675215459 instance=ExtResource("4_3j68x")]
+position = Vector2(81, 126)
+collision_mask = 0

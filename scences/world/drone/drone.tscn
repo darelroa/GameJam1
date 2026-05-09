@@ -1,20 +1,75 @@
 [gd_scene format=3 uid="uid://ca5nmis1m4ull"]
 
-[ext_resource type="Script" uid="uid://bs6lwpcqltkdt" path="res://drone.gd" id="1_4w0wj"]
-[ext_resource type="Texture2D" uid="uid://brydlyi3pm8vc" path="res://assets/sprites/objects/erics awesome drone.PNG" id="2_4w0wj"]
+[ext_resource type="Script" uid="uid://bb3qoreaxq6ir" path="res://drone.gd" id="1_4w0wj"]
+[ext_resource type="Texture2D" uid="uid://d0tppf76h81n6" path="res://assets/sprites/eric drone.png" id="2_4w0wj"]
+[ext_resource type="PackedScene" uid="uid://dlf6udbl2efiv" path="res://scences/world/drone/question_ui.tscn" id="3_mlqjt"]
+[ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="4_bk3w3"]
+[ext_resource type="FontFile" uid="uid://dysj28cm65uu0" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_vsd2c"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_32x3q"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4w0wj"]
+size = Vector2(149.57477, 49.81491)
 
 [node name="drone" type="Area2D" unique_id=675215459]
 script = ExtResource("1_4w0wj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569005966]
-position = Vector2(0.00012207031, 6.1035156e-05)
+position = Vector2(1069.2612, 414.94693)
 rotation = 0.0019482261
 scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("CircleShape2D_32x3q")
+shape = SubResource("RectangleShape2D_4w0wj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=444903333]
-position = Vector2(1070, 423.5)
-scale = Vector2(0.10399998, 0.087499976)
+position = Vector2(1067.5, 414.5)
+scale = Vector2(0.08, 0.061)
 texture = ExtResource("2_4w0wj")
+
+[node name="QuestionUI" parent="." unique_id=1893769574 instance=ExtResource("3_mlqjt")]
+visible = false
+
+[node name="PanelContainer2" type="PanelContainer" parent="QuestionUI" unique_id=309201727]
+custom_minimum_size = Vector2(2, 0)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -162.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0003205227
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="QuestionUI/PanelContainer2" unique_id=1383406279]
+custom_minimum_size = Vector2(3, 3)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="QuestionUI/PanelContainer2/MarginContainer" unique_id=400027443]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=931931771]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bk3w3")
+text = "What is 2+2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1287241972]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bk3w3")
+alignment = 1
+
+[node name="Button" type="Button" parent="QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1895971750]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.49411765, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("5_vsd2c")
+text = "CONFIRM
+"
