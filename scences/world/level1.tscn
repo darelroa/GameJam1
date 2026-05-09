@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://ct5wx338ev0ro" path="res://assets/sprites/leveldesign/level_one_scene.PNG" id="1_cl34l"]
 [ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="2_jmrgv"]
+[ext_resource type="PackedScene" uid="uid://p0fmmtm7xsrt" path="res://scences/entities/killzone.tscn" id="3_jmrgv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3j68x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eyt8p"]
 size = Vector2(368, 90)
@@ -9,12 +12,30 @@ size = Vector2(368, 90)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dt1gv"]
 size = Vector2(778, 87)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmrgv"]
+size = Vector2(551.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3j68x"]
+size = Vector2(141, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_saiqn"]
+size = Vector2(170.31226, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v32oq"]
+size = Vector2(75.62491, 1504.6974)
+
 [node name="level 1" type="Node2D" unique_id=989943834]
 
 [node name="LevelOneScene" type="Sprite2D" parent="." unique_id=699255470]
 position = Vector2(640, 480)
 scale = Vector2(0.64, 0.6386666)
 texture = ExtResource("1_cl34l")
+
+[node name="Killzone" parent="." unique_id=1190324112 instance=ExtResource("3_jmrgv")]
+position = Vector2(428, 1027)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1142744524]
+shape = SubResource("WorldBoundaryShape2D_3j68x")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2082770186]
 collision_layer = 256
@@ -29,3 +50,52 @@ shape = SubResource("RectangleShape2D_dt1gv")
 
 [node name="player1" parent="." unique_id=1692882400 instance=ExtResource("2_jmrgv")]
 position = Vector2(45, 832)
+
+[node name="Camera2D" type="Camera2D" parent="player1" unique_id=497148937]
+zoom = Vector2(1.2, 1.2)
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 960
+position_smoothing_enabled = true
+
+[node name="higher ground" type="StaticBody2D" parent="." unique_id=832446346]
+position = Vector2(583, 815)
+collision_layer = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="higher ground" unique_id=831361562]
+position = Vector2(420.75, -233)
+shape = SubResource("RectangleShape2D_jmrgv")
+one_way_collision = true
+
+[node name="aircon 1" type="StaticBody2D" parent="." unique_id=215014591]
+position = Vector2(1176, 766)
+collision_layer = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="aircon 1" unique_id=1694598451]
+position = Vector2(-21, -17)
+shape = SubResource("RectangleShape2D_3j68x")
+one_way_collision = true
+
+[node name="aircon 2" type="StaticBody2D" parent="." unique_id=675275235]
+position = Vector2(640, 480)
+scale = Vector2(0.64, 0.6386666)
+collision_layer = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="aircon 2" unique_id=225347017]
+position = Vector2(331.25, 325.67856)
+shape = SubResource("RectangleShape2D_saiqn")
+one_way_collision = true
+
+[node name="game border" type="StaticBody2D" parent="." unique_id=1874305925]
+position = Vector2(640, 480)
+scale = Vector2(0.64, 0.6386666)
+collision_layer = 256
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="game border" unique_id=452614673]
+position = Vector2(1037.5, -46.97288)
+shape = SubResource("RectangleShape2D_v32oq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game border" unique_id=966555977]
+position = Vector2(-1037.5, -18.789146)
+shape = SubResource("RectangleShape2D_v32oq")

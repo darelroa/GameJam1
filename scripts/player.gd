@@ -1,8 +1,8 @@
 class_name Player extends CharacterBody2D
 
 @export var speed: float = 200.0
-@export var gravity: float = 980.0
-@export var jump_velocity: float = -400.0
+@export var gravity: float = 880.0
+@export var jump_velocity: float = -500.0
 @onready var anim: AnimatedSprite2D =$AnimatedSprite2D
 
 func _ready() -> void:
