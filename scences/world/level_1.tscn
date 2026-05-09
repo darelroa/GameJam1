@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://j0jqfyt78ll3"]
 
 [ext_resource type="Texture2D" uid="uid://ct5wx338ev0ro" path="res://assets/sprites/leveldesign/level_one_scene.PNG" id="1_m8ikt"]
-[ext_resource type="PackedScene" path="res://scences/entities/player1.tscn" id="2_7is3k"]
+[ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="2_7is3k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eyt8p"]
 size = Vector2(368, 90)
