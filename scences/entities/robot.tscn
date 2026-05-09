@@ -20,11 +20,31 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="robot" type="Node2D" unique_id=1608089942]
+[node name="robot" type="Area2D" unique_id=1256268370]
 script = ExtResource("1_wt7ew")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=287151900]
-position = Vector2(100, 100)
+position = Vector2(-43, -55)
 sprite_frames = SubResource("SpriteFrames_5xb3s")
 animation = &"light"
 centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1280290337]
+
+[node name="DialogueBubble" type="Control" parent="." unique_id=656385491]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="DialogueBubble" unique_id=713591208]
+layout_mode = 0
+offset_left = -124.0
+offset_top = -76.0
+offset_right = -54.0
+offset_bottom = -21.0
+
+[node name="Label" type="Label" parent="DialogueBubble/Panel" unique_id=607035083]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bow5pkpoocdx8"]
+
+[ext_resource type="Script" path="res://claudea.gd" id="1_5iw5d"]
+[ext_resource type="Texture2D" uid="uid://xmvs3024e4n1" path="res://assets/sprites/claudea/IMG_0682.png" id="2_f3otr"]
+[ext_resource type="Texture2D" uid="uid://j8p2iuan5hs" path="res://assets/sprites/claudea/IMG_0683.png" id="3_hj20h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tn1jb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_f3otr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hj20h")
+}],
+"loop": true,
+"name": &"light",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndl67"]
+size = Vector2(73, 69)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rogdh"]
+radius = 78.0
+
+[node name="claudea" type="CharacterBody2D" unique_id=1182103625]
+script = ExtResource("1_5iw5d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1462773961]
+sprite_frames = SubResource("SpriteFrames_tn1jb")
+animation = &"light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=744566774]
+position = Vector2(-1.5, 13.5)
+shape = SubResource("RectangleShape2D_ndl67")
+
+[node name="chat_detection_area" type="Area2D" parent="." unique_id=787795806]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area" unique_id=1481401266]
+position = Vector2(-1, 12)
+shape = SubResource("CircleShape2D_rogdh")

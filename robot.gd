@@ -1,19 +1,15 @@
-extends Node2D
+extends Area2D
 
-@export var flash_speed: float = 0.1
+@export var dialogue_text: String = ""
+@export var task_text: String = ""
 
-
-var _timer: float = 0.0
-var _is_on: bool = false
+@onready var dialogue = $DialogueBubble
+@onready var label = $DialogueBubble/Panel/Label
 
 func _ready() -> void:
-	$AnimatedSprite2D.animation = "light"
-	$AnimatedSprite2D.frame = 0
+	dialogue.visible = false
+	label.text = dialogue_text + "\n\n" + task_text
 
-
-func _process(delta: float) -> void:
-	_timer += delta
-	if _timer >= flash_speed:
-		_timer = 0.0
-		_is_on = !_is_on
-		$AnimatedSprite2D.frame = 1 if _is_on else 0
+func _on_input_event(_viewport, event, _shape_idx) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		dialogue.visible = !dialogue.visible 
