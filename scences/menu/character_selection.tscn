@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dwrhrfi5mtnmd"]
+[gd_scene format=3 uid="uid://dgghmd5sblvw1"]
 
-[ext_resource type="Script" uid="uid://4uqa5s7vvkoj" path="res://scences/menu/character_selection.gd" id="1_d8sua"]
+[ext_resource type="Script" path="res://scences/menu/character_selection.gd" id="1_d8sua"]
 [ext_resource type="Texture2D" uid="uid://bd4ua5hy6dysj" path="res://assets/sprites/playercharacter1/IMG_2365.PNG" id="1_onfso"]
 [ext_resource type="Texture2D" uid="uid://cshw2xu1wx1m" path="res://assets/sprites/playercharacter2/IMG_2360.PNG" id="2_u7jcg"]
 [ext_resource type="Texture2D" uid="uid://bn4ocx20dljvc" path="res://assets/sprites/playercharacter4/IMG_2349.PNG" id="3_d8sua"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cbu7isp281n38"]
 
-[ext_resource type="PackedScene" uid="uid://d4aar6yjyiw64" path="res://scences/entities/player3.tscn" id="1_f70fn"]
+[ext_resource type="PackedScene" uid="uid://dauywuak28fvs" path="res://scences/entities/player3.tscn" id="1_f70fn"]
+[ext_resource type="Texture2D" uid="uid://b5kklhu37fo8k" path="res://assets/sprites/objects/shitty ahh drone that bhoomini drew.png" id="2_oxhet"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f70fn"]
 
@@ -13,5 +14,10 @@ position = Vector2(277, 195)
 collision_layer = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary" unique_id=552707824]
-position = Vector2(343, 425)
+position = Vector2(160, 138)
 shape = SubResource("WorldBoundaryShape2D_f70fn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=314050031]
+position = Vector2(233, 89.99999)
+scale = Vector2(0.04699999, 0.04699999)
+texture = ExtResource("2_oxhet")
