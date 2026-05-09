@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d4aar6yjyiw64"]
 
 [ext_resource type="Script" uid="uid://ms7uir4jipn0" path="res://scripts/player.gd" id="1_75d84"]
-[ext_resource type="SpriteFrames" uid="uid://qd2qlx1mpt6a" path="res://assets/sprites/movement/player3.tres" id="2_3k8bo"]
+[ext_resource type="SpriteFrames" uid="uid://qd2qlx1mpt6a" path="res://assets/sprites/playercharacter3/player3.tres" id="2_3k8bo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8guk"]
 size = Vector2(32, 32)
@@ -11,11 +11,9 @@ collision_mask = 256
 script = ExtResource("1_75d84")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1735463146]
-scale = Vector2(0.7, 0.7)
 sprite_frames = ExtResource("2_3k8bo")
-animation = &"run"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=238864000]
-position = Vector2(-3.0000002, 24.000002)
-scale = Vector2(0.7, 0.7)
+position = Vector2(-3, 34)
 shape = SubResource("RectangleShape2D_v8guk")
