@@ -12,7 +12,11 @@ func _process(delta: float) -> void:
 
 
 func _on_start_button_pressed() -> void:
+<<<<<<< HEAD
 	get_tree().change_scene_to_file("res://scences/world/level1.tscn")
+=======
+	get_tree().change_scene_to_file("res://scences/world/level_1.tscn")
+>>>>>>> 7fd5d9593471f91949fd08b332a3276329a9938c
 
 
 func _on_quit_button_pressed() -> void:
