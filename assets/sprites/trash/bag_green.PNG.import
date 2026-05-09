@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://od60f0wndhbr"
-path="res://.godot/imported/IMG_0695.PNG-ed0fb836f226c77b0e70639ec644db62.ctex"
+path="res://.godot/imported/bag_green.PNG-d19a8516a1ee9f34c279aa22e27320ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/objects/IMG_0695.PNG"
-dest_files=["res://.godot/imported/IMG_0695.PNG-ed0fb836f226c77b0e70639ec644db62.ctex"]
+source_file="res://assets/sprites/trash/bag_green.PNG"
+dest_files=["res://.godot/imported/bag_green.PNG-d19a8516a1ee9f34c279aa22e27320ce.ctex"]
 
 [params]
 

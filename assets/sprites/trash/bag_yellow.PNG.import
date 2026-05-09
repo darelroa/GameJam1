@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnbbxo26ydmvc"
-path="res://.godot/imported/IMG_0701.PNG-f935b5f43a46f6ecd693c279659d20f6.ctex"
+uid="uid://chnacbrl1pybl"
+path="res://.godot/imported/bag_yellow.PNG-8f9ffb984b57f122af79324fc6b6ef28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/objects/IMG_0701.PNG"
-dest_files=["res://.godot/imported/IMG_0701.PNG-f935b5f43a46f6ecd693c279659d20f6.ctex"]
+source_file="res://assets/sprites/trash/bag_yellow.PNG"
+dest_files=["res://.godot/imported/bag_yellow.PNG-8f9ffb984b57f122af79324fc6b6ef28.ctex"]
 
 [params]
 

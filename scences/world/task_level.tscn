@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://qghyu8t7kvfr"]
+
+[ext_resource type="Texture2D" uid="uid://dyqo0jy1jk8mb" path="res://assets/sprites/leveldesign/trash_background_scene.png" id="1_kmj0d"]
+[ext_resource type="Texture2D" uid="uid://ddqknd8iu8hh7" path="res://assets/sprites/trash/IMG_0700.PNG" id="2_y6sbr"]
+[ext_resource type="Texture2D" uid="uid://c217ryaliigpq" path="res://assets/sprites/trash/IMG_0699.PNG" id="3_hbk87"]
+[ext_resource type="Texture2D" uid="uid://bnbbxo26ydmvc" path="res://assets/sprites/trash/IMG_0701.PNG" id="4_ji8q2"]
+[ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="5_qbsia"]
+[ext_resource type="PackedScene" uid="uid://b1tfei4txxpry" path="res://scences/world/objects/trash_bag.tscn" id="6_xbi5j"]
+[ext_resource type="PackedScene" uid="uid://b7sd7cyes8c6x" path="res://scences/ui/task_dialogue.tscn" id="7_nry0w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3a2um"]
+size = Vector2(1281, 70)
+
+[node name="TaskLevel" type="Node2D" unique_id=1268156440]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2099277107]
+position = Vector2(640.1666, 479.875)
+scale = Vector2(0.64016664, 0.6401667)
+texture = ExtResource("1_kmj0d")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1751011629]
+collision_layer = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=778192477]
+position = Vector2(640.5, 925)
+shape = SubResource("RectangleShape2D_3a2um")
+
+[node name="BinYellow" type="Sprite2D" parent="." unique_id=501261367]
+position = Vector2(900, 837)
+scale = Vector2(0.04725001, 0.04725001)
+texture = ExtResource("2_y6sbr")
+
+[node name="BinGreen" type="Sprite2D" parent="." unique_id=1879479631]
+position = Vector2(1100, 836)
+scale = Vector2(0.047999986, 0.047999986)
+texture = ExtResource("3_hbk87")
+
+[node name="BinRed" type="Sprite2D" parent="." unique_id=174819291]
+position = Vector2(1000, 836)
+scale = Vector2(0.04899999, 0.04899999)
+texture = ExtResource("4_ji8q2")
+
+[node name="player1" parent="." unique_id=1692882400 instance=ExtResource("5_qbsia")]
+position = Vector2(77, 849)
+
+[node name="TrashBagYellow" parent="." unique_id=150704496 instance=ExtResource("6_xbi5j")]
+position = Vector2(403, 848)
+scale = Vector2(0.04, 0.04)
+collision_layer = 1
+
+[node name="TrashBagRed" parent="." unique_id=314912483 instance=ExtResource("6_xbi5j")]
+position = Vector2(564, 848)
+scale = Vector2(0.04, 0.04)
+bag_colour = "red"
+
+[node name="TrashBagGreen" parent="." unique_id=1188263541 instance=ExtResource("6_xbi5j")]
+position = Vector2(732, 848)
+scale = Vector2(0.04, 0.04)
+bag_colour = "green"
+
+[node name="TaskDialogue" parent="." unique_id=1800230298 instance=ExtResource("7_nry0w")]

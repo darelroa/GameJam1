@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b1tfei4txxpry"]
+
+[ext_resource type="Script" uid="uid://c060sxqdpfacx" path="res://scripts/trash_bag.gd" id="1_b0jqc"]
+[ext_resource type="Texture2D" uid="uid://chnacbrl1pybl" path="res://assets/sprites/trash/bag_yellow.PNG" id="1_w07jq"]
+[ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="2_b0jqc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dkao4"]
+radius = 912.0022
+
+[node name="TrashBag" type="Area2D" unique_id=150704496]
+position = Vector2(1380, 1439)
+collision_layer = 4
+script = ExtResource("1_b0jqc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1239157560]
+texture = ExtResource("1_w07jq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=471680109]
+position = Vector2(-33, 18)
+shape = SubResource("CircleShape2D_dkao4")
+
+[node name="Label" type="Label" parent="." unique_id=461878042]
+offset_left = -1142.0
+offset_top = -1242.0
+offset_right = 1160.0
+offset_bottom = -1141.0
+theme_override_fonts/font = ExtResource("2_b0jqc")
+theme_override_font_sizes/font_size = 100
+text = "Press [E] to open code editor"
+metadata/_edit_use_anchors_ = true
