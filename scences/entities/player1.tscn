@@ -1,50 +1,17 @@
 [gd_scene format=3 uid="uid://d3rn8mgok8v4"]
 
 [ext_resource type="Script" uid="uid://ms7uir4jipn0" path="res://scripts/player.gd" id="1_hrut5"]
-[ext_resource type="Texture2D" uid="uid://bd4ua5hy6dysj" path="res://assets/sprites/playercharacter1/IMG_2365.PNG" id="2_fi0hu"]
-[ext_resource type="Texture2D" uid="uid://bh1dpmth4b53e" path="res://assets/sprites/playercharacter1/IMG_2366.PNG" id="3_fb7bd"]
-[ext_resource type="Texture2D" uid="uid://hwqugc5lpphu" path="res://assets/sprites/playercharacter1/IMG_2367.PNG" id="4_8wlj2"]
-[ext_resource type="Texture2D" uid="uid://giqw8qrkk43q" path="res://assets/sprites/playercharacter1/IMG_2368.PNG" id="5_yv16j"]
-[ext_resource type="Texture2D" uid="uid://dtpav1qff8fsd" path="res://assets/sprites/playercharacter1/IMG_2369.PNG" id="6_hl6s4"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_0xwnd"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_fi0hu")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 2.0,
-"texture": ExtResource("3_fb7bd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_8wlj2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_yv16j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_hl6s4")
-}],
-"loop": true,
-"name": &"run",
-"speed": 5.0
-}]
+[ext_resource type="SpriteFrames" uid="uid://dq8pvs640rdqr" path="res://assets/sprites/playercharacter1/player1.tres" id="2_uo8m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8guk"]
 size = Vector2(32, 32)
 
 [node name="player1" type="CharacterBody2D" unique_id=1692882400]
-collision_layer = 2
 collision_mask = 256
 script = ExtResource("1_hrut5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1735463146]
-sprite_frames = SubResource("SpriteFrames_0xwnd")
+sprite_frames = ExtResource("2_uo8m2")
 animation = &"run"
 frame_progress = 0.9775439
 speed_scale = 1.5

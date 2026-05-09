@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="GameJamGame"
-run/main_scene="uid://dwwfc8rbvk6cy"
+run/main_scene="uid://ccdjfaod6spq7"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://cp0yd482cr7cd"
 
 [display]
 

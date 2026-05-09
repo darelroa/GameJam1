@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dwrhrfi5mtnmd"]
+
+[ext_resource type="Script" uid="uid://4uqa5s7vvkoj" path="res://scences/menu/character_selection.gd" id="1_d8sua"]
+[ext_resource type="Texture2D" uid="uid://bd4ua5hy6dysj" path="res://assets/sprites/playercharacter1/IMG_2365.PNG" id="1_onfso"]
+[ext_resource type="Texture2D" uid="uid://cshw2xu1wx1m" path="res://assets/sprites/playercharacter2/IMG_2360.PNG" id="2_u7jcg"]
+[ext_resource type="Texture2D" uid="uid://bn4ocx20dljvc" path="res://assets/sprites/playercharacter4/IMG_2349.PNG" id="3_d8sua"]
+[ext_resource type="Texture2D" uid="uid://2071sb10qxxm" path="res://assets/sprites/playercharacter3/IMG_0685.png" id="4_snomk"]
+
+[node name="character_selection" type="Control" unique_id=549122944]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_d8sua")
+
+[node name="player1button" type="Button" parent="." unique_id=1922218904]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 239.0
+offset_right = 266.0
+offset_bottom = 360.0
+icon = ExtResource("1_onfso")
+flat = true
+expand_icon = true
+
+[node name="player2button" type="Button" parent="." unique_id=117081729]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 238.0
+offset_right = 495.0
+offset_bottom = 360.0
+icon = ExtResource("2_u7jcg")
+flat = true
+expand_icon = true
+
+[node name="player3button" type="Button" parent="." unique_id=531849230]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 246.0
+offset_right = 678.0
+offset_bottom = 354.0
+icon = ExtResource("4_snomk")
+flat = true
+
+[node name="player4button" type="Button" parent="." unique_id=530676167]
+layout_mode = 0
+offset_left = 731.0
+offset_top = 236.0
+offset_right = 860.0
+offset_bottom = 364.0
+icon = ExtResource("3_d8sua")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="player1button" to="." method="_on_player_1_button_pressed"]
+[connection signal="pressed" from="player2button" to="." method="_on_player_2_button_pressed"]
+[connection signal="pressed" from="player3button" to="." method="_on_player_3_button_pressed"]
+[connection signal="pressed" from="player4button" to="." method="_on_player_4_button_pressed"]
