@@ -17,7 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+<<<<<<< HEAD
 Global="*uid://cl5upmq2ww1mo"
+=======
+Global="*res://Global.gd"
+>>>>>>> e47609beaf137b6bb9dd1b57c07615c01a439795
 
 [display]
 
