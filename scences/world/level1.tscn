@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://2rscw72aot4o"]
+
+<<<<<<< HEAD
+[ext_resource type="Texture2D" uid="uid://ct5wx338ev0ro" path="res://assets/sprites/leveldesign/level_one_scene.PNG" id="1_m8ikt"]
+[ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="2_7is3k"]
+[ext_resource type="PackedScene" uid="uid://p0fmmtm7xsrt" path="res://scences/entities/killzone.tscn" id="3_7is3k"]
+[ext_resource type="PackedScene" uid="uid://dcn58qravf44u" path="res://scences/entities/robot.tscn" id="4_3j68x"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7is3k"]
+=======
+[ext_resource type="Texture2D" uid="uid://ct5wx338ev0ro" path="res://assets/sprites/leveldesign/level_one_scene.PNG" id="1_cl34l"]
+[ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="2_jmrgv"]
+>>>>>>> 5e2d23d5517c95f1d545303a59e8592eda29c847
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyt8p"]
+size = Vector2(368, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt1gv"]
+size = Vector2(778, 87)
+
+[node name="level 1" type="Node2D" unique_id=989943834]
+
+[node name="LevelOneScene" type="Sprite2D" parent="." unique_id=699255470]
+position = Vector2(640, 480)
+scale = Vector2(0.64, 0.6386666)
+<<<<<<< HEAD
+texture = ExtResource("1_m8ikt")
+
+[node name="robot" parent="." unique_id=1608089942 instance=ExtResource("4_3j68x")]
+top_level = true
+position = Vector2(21, -48)
+
+[node name="Killzone" parent="." unique_id=518670943 instance=ExtResource("3_7is3k")]
+position = Vector2(439, 1019)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=574406583]
+shape = SubResource("WorldBoundaryShape2D_7is3k")
+=======
+texture = ExtResource("1_cl34l")
+>>>>>>> 5e2d23d5517c95f1d545303a59e8592eda29c847
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2082770186]
+collision_layer = 256
+
+[node name="ground 1" type="CollisionShape2D" parent="StaticBody2D" unique_id=100418427]
+position = Vector2(185, 916)
+shape = SubResource("RectangleShape2D_eyt8p")
+
+[node name="ground 2" type="CollisionShape2D" parent="StaticBody2D" unique_id=879294359]
+position = Vector2(892, 914.5)
+shape = SubResource("RectangleShape2D_dt1gv")
+
+[node name="player1" parent="." unique_id=1692882400 instance=ExtResource("2_jmrgv")]
+position = Vector2(45, 832)

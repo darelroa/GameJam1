@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://ccdjfaod6spq7"]
+
+[ext_resource type="Script" uid="uid://dsswfua26txdv" path="res://scripts/menu/menu.gd" id="1_myahl"]
+[ext_resource type="FontFile" uid="uid://dysj28cm65uu0" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_xsg5i"]
+[ext_resource type="Texture2D" uid="uid://dj37v1rnev0au" path="res://assets/sprites/black_background.jpg" id="2_fejg2"]
+
+[node name="Menu" type="Control" unique_id=1293454851]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_myahl")
+
+[node name="BlackBackground" type="Sprite2D" parent="." unique_id=1837210249]
+position = Vector2(825.7772, 498.25003)
+scale = Vector2(3.0157144, 3.0157144)
+texture = ExtResource("2_fejg2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1769072947]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 556.0
+offset_right = 706.4516
+offset_bottom = 623.0
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1355125967]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.36078432, 0.99607843, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.36078432, 0.99607843, 1, 1)
+theme_override_fonts/font = ExtResource("1_xsg5i")
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=133739451]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.36078432, 0.99607843, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.36078432, 0.99607843, 1, 1)
+theme_override_fonts/font = ExtResource("1_xsg5i")
+text = "Quit"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=971469378]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 467.0
+offset_right = 757.0
+offset_bottom = 507.0
+
+[node name="CharacterButton" type="Button" parent="VBoxContainer2" unique_id=2083584559]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.36078432, 0.99607843, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.36078432, 0.99607843, 1, 1)
+theme_override_fonts/font = ExtResource("1_xsg5i")
+text = "Select Character"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/CharacterButton" to="." method="_on_character_button_pressed"]
