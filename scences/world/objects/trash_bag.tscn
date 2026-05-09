@@ -5,7 +5,10 @@
 [ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="2_b0jqc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dkao4"]
-radius = 912.0022
+radius = 1796.4435
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0jqc"]
+size = Vector2(2011, 5138)
 
 [node name="TrashBag" type="Area2D" unique_id=150704496]
 position = Vector2(1380, 1439)
@@ -20,11 +23,18 @@ position = Vector2(-33, 18)
 shape = SubResource("CircleShape2D_dkao4")
 
 [node name="Label" type="Label" parent="." unique_id=461878042]
-offset_left = -1142.0
-offset_top = -1242.0
-offset_right = 1160.0
-offset_bottom = -1141.0
+offset_left = -2070.0
+offset_top = -2272.0
+offset_right = 7130.0
+offset_bottom = -1872.0
 theme_override_fonts/font = ExtResource("2_b0jqc")
-theme_override_font_sizes/font_size = 100
-text = "Press [E] to open code editor"
+theme_override_font_sizes/font_size = 300
+text = "Press [E] to code"
 metadata/_edit_use_anchors_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1704200868]
+collision_layer = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2121487543]
+position = Vector2(9.5, -1662)
+shape = SubResource("RectangleShape2D_b0jqc")

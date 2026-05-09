@@ -11,6 +11,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3a2um"]
 size = Vector2(1281, 70)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmj0d"]
+size = Vector2(49, 695)
+
 [node name="TaskLevel" type="Node2D" unique_id=1268156440]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2099277107]
@@ -18,44 +21,58 @@ position = Vector2(640.1666, 479.875)
 scale = Vector2(0.64016664, 0.6401667)
 texture = ExtResource("1_kmj0d")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1751011629]
+[node name="ground" type="StaticBody2D" parent="." unique_id=1751011629]
 collision_layer = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=778192477]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground" unique_id=778192477]
 position = Vector2(640.5, 925)
 shape = SubResource("RectangleShape2D_3a2um")
 
 [node name="BinYellow" type="Sprite2D" parent="." unique_id=501261367]
-position = Vector2(900, 837)
-scale = Vector2(0.04725001, 0.04725001)
+position = Vector2(984, 808)
+scale = Vector2(0.08, 0.08)
 texture = ExtResource("2_y6sbr")
 
-[node name="BinGreen" type="Sprite2D" parent="." unique_id=1879479631]
-position = Vector2(1100, 836)
-scale = Vector2(0.047999986, 0.047999986)
-texture = ExtResource("3_hbk87")
-
 [node name="BinRed" type="Sprite2D" parent="." unique_id=174819291]
-position = Vector2(1000, 836)
-scale = Vector2(0.04899999, 0.04899999)
+position = Vector2(1093, 808)
+scale = Vector2(0.08, 0.08)
 texture = ExtResource("4_ji8q2")
+
+[node name="BinGreen" type="Sprite2D" parent="." unique_id=1879479631]
+position = Vector2(1201, 808)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("3_hbk87")
 
 [node name="player1" parent="." unique_id=1692882400 instance=ExtResource("5_qbsia")]
 position = Vector2(77, 849)
 
 [node name="TrashBagYellow" parent="." unique_id=150704496 instance=ExtResource("6_xbi5j")]
-position = Vector2(403, 848)
-scale = Vector2(0.04, 0.04)
+position = Vector2(401, 833)
+scale = Vector2(0.06, 0.06)
 collision_layer = 1
+bin_position = Vector2(984, 670)
 
 [node name="TrashBagRed" parent="." unique_id=314912483 instance=ExtResource("6_xbi5j")]
-position = Vector2(564, 848)
-scale = Vector2(0.04, 0.04)
+position = Vector2(603.00006, 833)
+scale = Vector2(0.06, 0.06)
 bag_colour = "red"
+bin_position = Vector2(1093, 670)
 
 [node name="TrashBagGreen" parent="." unique_id=1188263541 instance=ExtResource("6_xbi5j")]
-position = Vector2(732, 848)
-scale = Vector2(0.04, 0.04)
+position = Vector2(804, 833)
+scale = Vector2(0.06, 0.06)
 bag_colour = "green"
+bin_position = Vector2(1201, 670)
 
-[node name="TaskDialogue" parent="." unique_id=1800230298 instance=ExtResource("7_nry0w")]
+[node name="TaskDialog" parent="." unique_id=1800230298 instance=ExtResource("7_nry0w")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1708881721]
+collision_layer = 256
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1283125589]
+position = Vector2(1304, 615)
+shape = SubResource("RectangleShape2D_kmj0d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1694514698]
+position = Vector2(-24, 611)
+shape = SubResource("RectangleShape2D_kmj0d")
