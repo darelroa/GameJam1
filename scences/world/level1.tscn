@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://j0jqfyt78ll3"]
+[gd_scene format=3 uid="uid://2rscw72aot4o"]
 
-[ext_resource type="Texture2D" uid="uid://ct5wx338ev0ro" path="res://assets/sprites/leveldesign/level_one_scene.PNG" id="1_m8ikt"]
-[ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="2_7is3k"]
+[ext_resource type="Texture2D" uid="uid://ct5wx338ev0ro" path="res://assets/sprites/leveldesign/level_one_scene.PNG" id="1_cl34l"]
+[ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="2_jmrgv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eyt8p"]
 size = Vector2(368, 90)
@@ -14,7 +14,7 @@ size = Vector2(778, 87)
 [node name="LevelOneScene" type="Sprite2D" parent="." unique_id=699255470]
 position = Vector2(640, 480)
 scale = Vector2(0.64, 0.6386666)
-texture = ExtResource("1_m8ikt")
+texture = ExtResource("1_cl34l")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2082770186]
 collision_layer = 256
@@ -27,5 +27,5 @@ shape = SubResource("RectangleShape2D_eyt8p")
 position = Vector2(892, 914.5)
 shape = SubResource("RectangleShape2D_dt1gv")
 
-[node name="player1" parent="." unique_id=1692882400 instance=ExtResource("2_7is3k")]
+[node name="player1" parent="." unique_id=1692882400 instance=ExtResource("2_jmrgv")]
 position = Vector2(45, 832)
