@@ -22,7 +22,7 @@ var hint_state: int = 0
 func _ready() -> void:
 	var font = load("res://assets/fonts/PixelOperator8.ttf")
 	var font_bold = load("res://assets/fonts/PixelOperator8-Bold.ttf")
-	prompt_label.add_theme_font_override("font", font)
+	prompt_label.add_theme_font_override("font", font_bold)
 	line_edit1.add_theme_font_override("font", font)
 	line_edit2.add_theme_font_override("font", font)
 	line_fixed_label.add_theme_font_override("font", font)
