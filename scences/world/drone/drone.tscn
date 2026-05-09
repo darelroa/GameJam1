@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ca5nmis1m4ull"]
+
+[ext_resource type="Script" uid="uid://bs6lwpcqltkdt" path="res://drone.gd" id="1_4w0wj"]
+[ext_resource type="Texture2D" uid="uid://brydlyi3pm8vc" path="res://assets/sprites/objects/erics awesome drone.PNG" id="2_4w0wj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32x3q"]
+
+[node name="drone" type="Area2D" unique_id=675215459]
+script = ExtResource("1_4w0wj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569005966]
+position = Vector2(0.00012207031, 6.1035156e-05)
+rotation = 0.0019482261
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("CircleShape2D_32x3q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=444903333]
+position = Vector2(1070, 423.5)
+scale = Vector2(0.10399998, 0.087499976)
+texture = ExtResource("2_4w0wj")

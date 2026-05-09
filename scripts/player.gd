@@ -35,3 +35,4 @@ func _physics_process(delta: float) -> void:
 		anim.flip_h = true
 	elif direction > 0:
 		anim.flip_h = false
+	$robot.start_flashing()
