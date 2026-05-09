@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ct5wx338ev0ro" path="res://assets/sprites/leveldesign/level_one_scene.PNG" id="1_m8ikt"]
 [ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="2_7is3k"]
 [ext_resource type="PackedScene" uid="uid://p0fmmtm7xsrt" path="res://scences/entities/killzone.tscn" id="3_7is3k"]
+[ext_resource type="PackedScene" uid="uid://dcn58qravf44u" path="res://scences/entities/robot.tscn" id="4_3j68x"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7is3k"]
 
@@ -30,6 +31,10 @@ size = Vector2(37, 825)
 position = Vector2(640, 480)
 scale = Vector2(0.64, 0.6386666)
 texture = ExtResource("1_m8ikt")
+
+[node name="robot" parent="." unique_id=1608089942 instance=ExtResource("4_3j68x")]
+top_level = true
+position = Vector2(21, -48)
 
 [node name="Killzone" parent="." unique_id=518670943 instance=ExtResource("3_7is3k")]
 position = Vector2(439, 1019)
