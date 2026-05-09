@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dwwfc8rbvk6cy"]
+[gd_scene format=3 uid="uid://dvcqqlgh6c50s"]
 
 [ext_resource type="Texture2D" uid="uid://ct5wx338ev0ro" path="res://assets/sprites/leveldesign/level_one_scene.PNG" id="1_m8ikt"]
 [ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="2_7is3k"]
@@ -20,9 +20,6 @@ size = Vector2(109, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw0wg"]
 size = Vector2(141, 14)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmrgv"]
-size = Vector2(37, 825)
 
 [node name="level 1" type="Node2D" unique_id=989943834]
 
@@ -89,16 +86,3 @@ collision_mask = 2
 position = Vector2(-26, 24)
 shape = SubResource("RectangleShape2D_mw0wg")
 one_way_collision = true
-
-[node name="game borders" type="StaticBody2D" parent="." unique_id=315637074]
-position = Vector2(-27, 868)
-collision_layer = 256
-collision_mask = 2
-
-[node name="right border" type="CollisionShape2D" parent="game borders" unique_id=888436181]
-position = Vector2(1325, -382)
-shape = SubResource("RectangleShape2D_jmrgv")
-
-[node name="left border" type="CollisionShape2D" parent="game borders" unique_id=129425444]
-position = Vector2(8.5, -402.5)
-shape = SubResource("RectangleShape2D_jmrgv")
