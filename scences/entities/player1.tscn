@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cek1dkhxixcic"]
+[gd_scene format=3 uid="uid://d3rn8mgok8v4"]
 
 [ext_resource type="Script" uid="uid://ms7uir4jipn0" path="res://scripts/player.gd" id="1_hrut5"]
 [ext_resource type="Texture2D" uid="uid://bd4ua5hy6dysj" path="res://assets/sprites/playercharacter1/IMG_2365.PNG" id="2_fi0hu"]
@@ -44,7 +44,9 @@ script = ExtResource("1_hrut5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1735463146]
 sprite_frames = SubResource("SpriteFrames_0xwnd")
-animation = &"idle"
+animation = &"run"
+frame_progress = 0.9775439
+speed_scale = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=238864000]
 position = Vector2(-3, 19)
