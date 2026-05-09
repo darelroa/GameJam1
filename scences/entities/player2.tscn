@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d20yp5ud1whi7"]
+[gd_scene format=3 uid="uid://ipo0pjoscr8r"]
 
 [ext_resource type="Script" uid="uid://ms7uir4jipn0" path="res://scripts/player.gd" id="1_hrut5"]
 [ext_resource type="Texture2D" uid="uid://cshw2xu1wx1m" path="res://assets/sprites/playercharacter2/IMG_2360.PNG" id="2_6gf6j"]
@@ -39,6 +39,7 @@ animations = [{
 size = Vector2(32, 32)
 
 [node name="player2" type="CharacterBody2D" unique_id=1692882400]
+collision_layer = 2
 collision_mask = 256
 script = ExtResource("1_hrut5")
 
