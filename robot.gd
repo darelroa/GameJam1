@@ -4,12 +4,37 @@ extends Area2D
 @export var task_text: String = ""
 
 @onready var dialogue = $DialogueBubble
-@onready var label = $DialogueBubble/Panel/Label
+@onready var context_label = $DialogueBubble/Control/Panel/ContextLabel
+@onready var task_label = $DialogueBubble/Control/Panel/TaskLabel
+@onready var next_button =$DialogueBubble/Control/Panel/Button
+
+
+enum State { CLOSED, CONTEXT, TASK}
+var current_state = State.CLOSED
 
 func _ready() -> void:
 	dialogue.visible = false
-	label.text = dialogue_text + "\n\n" + task_text
+	context_label.text = dialogue_text
+	task_label.text = task_text
+	task_label.visible = false
 
 func _on_input_event(_viewport, event, _shape_idx) -> void:
 	if event is InputEventMouseButton and event.pressed:
-		dialogue.visible = !dialogue.visible 
+		print("robot clicked!")
+		advance()
+
+func advance() -> void:
+	print("state: ", current_state)
+	match current_state:
+		State.CLOSED:
+			dialogue.visible = true
+			context_label.visible = true
+			current_state = State.CONTEXT
+		State.CONTEXT:
+			context_label.visible = false 
+			task_label.visible = true
+			current_state = State.TASK
+		State.TASK:
+			dialogue.visible = false
+			current_state = State.CLOSED
+		

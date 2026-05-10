@@ -30,6 +30,7 @@ size = Vector2(73, 69)
 radius = 78.0
 
 [node name="claudea" type="CharacterBody2D" unique_id=1182103625]
+position = Vector2(1188, 866)
 script = ExtResource("1_5iw5d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1462773961]
