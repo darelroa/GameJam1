@@ -20,13 +20,13 @@ texture = ExtResource("2_fejg2")
 
 [node name="Label" type="Label" parent="." unique_id=1460029382]
 layout_mode = 0
-offset_left = 245.0
-offset_top = 273.0
-offset_right = 1065.0
-offset_bottom = 377.0
+offset_left = 100.0
+offset_top = 279.0
+offset_right = 1200.0
+offset_bottom = 383.0
 theme_override_fonts/font = ExtResource("1_xsg5i")
 theme_override_font_sizes/font_size = 80
-text = "A Game Name"
+text = "Debug the Earth"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1769072947]
 layout_mode = 0

@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b7sd7cyes8c6x" path="res://scences/ui/task_dialogue.tscn" id="7_nry0w"]
 [ext_resource type="PackedScene" uid="uid://dcn58qravf44u" path="res://scences/entities/robot.tscn" id="8_y6sbr"]
 [ext_resource type="FontFile" uid="uid://dysj28cm65uu0" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_ji8q2"]
-[ext_resource type="PackedScene" uid="uid://brckopgwwyx8y" path="res://scences/portal.tscn" id="11_qbsia"]
+[ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="12_nry0w"]
 [ext_resource type="Texture2D" uid="uid://btlrfmyxroe4i" path="res://assets/sprites/objects/IMG_0694.PNG" id="12_xbi5j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3a2um"]
@@ -26,11 +26,6 @@ script = ExtResource("1_ji8q2")
 position = Vector2(640.1666, 479.875)
 scale = Vector2(0.64016664, 0.6401667)
 texture = ExtResource("1_kmj0d")
-
-[node name="Portal" parent="." unique_id=1329248294 instance=ExtResource("11_qbsia")]
-position = Vector2(1219, 810)
-collision_layer = 256
-target_scene = "res://scences/world/task_level.tscn"
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1203429755]
 position = Vector2(73.25001, 822.25006)
@@ -120,3 +115,12 @@ task_text = "Walk up to each trash bag and press E to interact.
 Sort each bag into the correct bin by completing the if-elif-else statement!
 
 Click me to close this and begin!"
+
+[node name="Label2" type="Label" parent="." unique_id=1567559353]
+offset_left = 1055.0
+offset_top = 657.0
+offset_right = 1267.0
+offset_bottom = 692.0
+theme_override_fonts/font = ExtResource("12_nry0w")
+text = "This is as far as 
+we got up to lol"

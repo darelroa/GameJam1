@@ -5,7 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://p0fmmtm7xsrt" path="res://scences/entities/killzone.tscn" id="3_jmrgv"]
 [ext_resource type="PackedScene" uid="uid://ca5nmis1m4ull" path="res://scences/world/drone/drone.tscn" id="4_3j68x"]
 [ext_resource type="Texture2D" uid="uid://csiwrkb48qy4s" path="res://assets/sprites/objects/GameJam_Scene_1_-_Air 4.png" id="4_saiqn"]
-[ext_resource type="PackedScene" uid="uid://cl2q6mo30yojx" path="res://scences/world/drone/drone_2.tscn" id="5_v32oq"]
+[ext_resource type="PackedScene" path="res://scences/world/drone/drone_2.tscn" id="5_v32oq"]
+[ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="7_v0m7i"]
+[ext_resource type="PackedScene" uid="uid://dcn58qravf44u" path="res://scences/entities/robot.tscn" id="8_ykihc"]
+[ext_resource type="PackedScene" uid="uid://brckopgwwyx8y" path="res://scences/portal.tscn" id="9_ykihc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3j68x"]
 
@@ -47,6 +50,20 @@ texture = ExtResource("1_cl34l")
 position = Vector2(417.00003, 529)
 scale = Vector2(0.20399997, 0.17300001)
 texture = ExtResource("4_saiqn")
+
+[node name="Portal" parent="." unique_id=1329248294 instance=ExtResource("9_ykihc")]
+position = Vector2(76, 375)
+collision_layer = 256
+target_scene = "res://scences/world/task_level.tscn"
+
+[node name="Sprite2D" parent="Portal" index="0" unique_id=1686311727]
+rotation = 3.1642818
+
+[node name="Label" parent="Portal" index="1" unique_id=1352453412]
+offset_left = -45.0
+offset_top = -105.0
+offset_right = 129.0
+offset_bottom = -86.0
 
 [node name="Killzone" parent="." unique_id=1190324112 instance=ExtResource("3_jmrgv")]
 position = Vector2(428, 1027)
@@ -165,6 +182,42 @@ position = Vector2(-3668.8118, -597.34265)
 shape = SubResource("RectangleShape2D_ykihc")
 one_way_collision = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1517991463]
+
+[node name="robot" parent="CanvasLayer" unique_id=1256268370 instance=ExtResource("8_ykihc")]
+position = Vector2(1133, 116)
+dialogue_text = "Move to each drone and revive them before finding the exit portal!"
+task_text = "For each drone, use your knowledge of Python variables and operations to revive each drone."
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1340628474]
+offset_left = 867.0
+offset_top = 106.0
+offset_right = 1079.0
+offset_bottom = 129.0
+theme_override_fonts/font = ExtResource("7_v0m7i")
+text = "click for help -->"
+
+[node name="Label" type="Label" parent="." unique_id=485849550]
+offset_left = 474.0
+offset_top = 700.0
+offset_right = 714.0
+offset_bottom = 756.0
+theme_override_fonts/font = ExtResource("7_v0m7i")
+text = "Try jumping on top 
+of the boxes!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1964447185]
+offset_left = 48.0
+offset_top = 695.0
+offset_right = 288.0
+offset_bottom = 751.0
+theme_override_fonts/font = ExtResource("7_v0m7i")
+text = "WASD
+to move"
+horizontal_alignment = 1
+
+[editable path="Portal"]
 [editable path="drone"]
 [editable path="drone/CanvasLayer/QuestionUI"]
 [editable path="drone_2"]

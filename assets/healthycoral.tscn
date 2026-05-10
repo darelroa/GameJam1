@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://wlwnvf2npm86"]
+
+[ext_resource type="Texture2D" uid="uid://cmksesxw5jf32" path="res://assets/sprites/objects/bluecoral.png" id="1_emh2w"]
+
+[node name="healthycoral" type="Node2D" unique_id=1085955529]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=90821670]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_emh2w")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=696536788]
