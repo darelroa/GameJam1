@@ -1,5 +1,6 @@
 extends Area2D
 
+@export var cutscene_slides: Array[String] = []
 @export var target_scene: String = ""
 
 var player_nearby: bool = false
@@ -31,4 +32,9 @@ func go_to_target_scene() -> void:
 	if target_scene == "":
 		print("Portal error: no target scene set!")
 		return
-	get_tree().change_scene_to_file(target_scene)
+	if cutscene_slides.size() > 0:
+		Global.cutscene_slides = cutscene_slides
+		Global.cutscene_next_scene = target_scene
+		get_tree().change_scene_to_file("res://scences/cutscene.tscn")
+	else:
+		get_tree().change_scene_to_file(target_scene)

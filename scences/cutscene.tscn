@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://brvs8k100x6ip"]
+
+[ext_resource type="Script" uid="uid://csaxi4xyaskha" path="res://scripts/cutscene.gd" id="1_02blo"]
+[ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="2_o764a"]
+
+[node name="Cutscene" type="Control" unique_id=1786490547]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_02blo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=202492880]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1867965772]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ClickLabel" type="Label" parent="." unique_id=1418639946]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_o764a")
+theme_override_font_sizes/font_size = 22
+text = "\"Click or press any key to continue\""
