@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://p0fmmtm7xsrt" path="res://scences/entities/killzone.tscn" id="3_jmrgv"]
 [ext_resource type="PackedScene" uid="uid://ca5nmis1m4ull" path="res://scences/world/drone/drone.tscn" id="4_3j68x"]
 [ext_resource type="Texture2D" uid="uid://csiwrkb48qy4s" path="res://assets/sprites/objects/GameJam_Scene_1_-_Air 4.png" id="4_saiqn"]
-[ext_resource type="PackedScene" path="res://scences/world/drone/drone_2.tscn" id="5_v32oq"]
+[ext_resource type="PackedScene" uid="uid://cl2q6mo30yojx" path="res://scences/world/drone/drone_2.tscn" id="5_v32oq"]
 [ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="7_v0m7i"]
 [ext_resource type="PackedScene" uid="uid://dcn58qravf44u" path="res://scences/entities/robot.tscn" id="8_ykihc"]
 [ext_resource type="PackedScene" uid="uid://brckopgwwyx8y" path="res://scences/portal.tscn" id="9_ykihc"]
@@ -96,7 +96,7 @@ position = Vector2(1071.4758, 413.45367)
 position = Vector2(1071, 416.00003)
 scale = Vector2(0.065999985, 0.052000016)
 
-[node name="WrongAnswerPopUp" parent="drone/CanvasLayer" parent_id_path=PackedInt32Array(675215459, 1193839404) index="1" unique_id=1953264528]
+[node name="HelpScreen" parent="drone/CanvasLayer" parent_id_path=PackedInt32Array(675215459, 1193839404) index="2" unique_id=213188395]
 visible = false
 
 [node name="drone_2" parent="." unique_id=905618168 instance=ExtResource("5_v32oq")]
