@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://p0fmmtm7xsrt" path="res://scences/entities/killzone.tscn" id="3_jmrgv"]
 [ext_resource type="PackedScene" uid="uid://ca5nmis1m4ull" path="res://scences/world/drone/drone.tscn" id="4_3j68x"]
 [ext_resource type="Texture2D" uid="uid://csiwrkb48qy4s" path="res://assets/sprites/objects/GameJam_Scene_1_-_Air 4.png" id="4_saiqn"]
+[ext_resource type="PackedScene" uid="uid://cl2q6mo30yojx" path="res://scences/world/drone/drone_2.tscn" id="5_v32oq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3j68x"]
 
@@ -38,7 +39,7 @@ size = Vector2(1013.6882, 398.22803)
 [node name="level 1" type="Node2D" unique_id=989943834]
 
 [node name="LevelOneScene" type="Sprite2D" parent="." unique_id=699255470]
-position = Vector2(639, 479.00003)
+position = Vector2(637, 477.00003)
 scale = Vector2(0.64, 0.6386666)
 texture = ExtResource("1_cl34l")
 
@@ -78,11 +79,33 @@ position = Vector2(1071.4758, 413.45367)
 position = Vector2(1071, 416.00003)
 scale = Vector2(0.065999985, 0.052000016)
 
+[node name="Label" parent="drone/CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(675215459, 400027443) index="0" unique_id=931931771]
+text = "battery = 37 
+battery =  battery + __
+print(battery)"
+
 [node name="HelpButton" parent="drone/CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(675215459, 758262351) index="1" unique_id=552480753]
 process_mode = 3
 
 [node name="TryAgainButton" parent="drone/CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(675215459, 758262351) index="2" unique_id=1673574504]
 process_mode = 3
+
+[node name="drone_2" parent="." unique_id=905618168 instance=ExtResource("5_v32oq")]
+position = Vector2(292, 463)
+
+[node name="Sprite2D" parent="drone_2" index="1" unique_id=1583280422]
+position = Vector2(1.1920929e-07, -2)
+
+[node name="Label" parent="drone_2/CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(905618168, 627733803) index="0" unique_id=71240140]
+text = "CurrentDrones = 2
+DroneCapacity = 3
+TotalGas = 78 
+MultiplyAnswer = ____ / (____ * ____)
+print(MultiplyAnswer)
+AnswerBank : [CurrentDrones, 13, DroneCapacity, TotalGas]
+***Write as an equation with no spaces***"
+
+[node name="Label" parent="drone_2/CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(905618168, 1483402610) index="0" unique_id=725502854 groups=["player"]]
 
 [node name="player1" parent="." unique_id=1692882400 instance=ExtResource("2_jmrgv")]
 position = Vector2(35, 836)
@@ -160,3 +183,4 @@ shape = SubResource("RectangleShape2D_ykihc")
 one_way_collision = true
 
 [editable path="drone"]
+[editable path="drone_2"]

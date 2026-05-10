@@ -8,6 +8,8 @@ extends Area2D
 @onready var help_button = $CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer/HelpButton
 @onready var try_again_button = $CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer/TryAgainButton
 
+
+
 var is_active = true
 
 func _ready():
@@ -34,7 +36,7 @@ func _on_submit_pressed():
 	check_answer(answer_input.text)
 	
 func check_answer(player_answer):
-	if player_answer == '63':
+	if player_answer == 'TotalGas/(CurrentDrones*DroneCapacity)' or player_answer == 'TotalGas/(DroneCapacity*CurrentDrones)':
 		ui_prompt.hide()
 		wrong_popup.hide()
 		get_tree().paused = false
@@ -55,8 +57,3 @@ func _on_try_again_pressed():
 func level_up_drone():
 	var tween = create_tween()
 	tween.tween_property(self, 'position', Vector2(position.x, position.y - 60), 1.5)
-	
-	
-
-
-	

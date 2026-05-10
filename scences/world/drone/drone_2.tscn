@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://cl2q6mo30yojx"]
+
+[ext_resource type="Script" uid="uid://hhc4iq5du7cf" path="res://drone_2.gd" id="1_7p6dg"]
+[ext_resource type="Texture2D" uid="uid://bmwo0hp6vi5nk" path="res://assets/sprites/objects/erics awesome drone.PNG" id="2_0t3c0"]
+[ext_resource type="PackedScene" uid="uid://dlf6udbl2efiv" path="res://scences/world/drone/question_ui.tscn" id="3_4wl1n"]
+[ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="4_upgwv"]
+[ext_resource type="FontFile" uid="uid://dysj28cm65uu0" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_pdcj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4vjs"]
+size = Vector2(118, 37.5)
+
+[node name="drone_2" type="Area2D" unique_id=905618168]
+script = ExtResource("1_7p6dg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=571363357]
+position = Vector2(-2, -1.75)
+shape = SubResource("RectangleShape2D_k4vjs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1583280422]
+scale = Vector2(0.061875008, 0.045437496)
+texture = ExtResource("2_0t3c0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1383326495]
+process_mode = 3
+
+[node name="QuestionUI" parent="CanvasLayer" unique_id=1893769574 instance=ExtResource("3_4wl1n")]
+visible = false
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/QuestionUI" unique_id=2130356530]
+custom_minimum_size = Vector2(2, 0)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -162.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0003205227
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/QuestionUI/PanelContainer2" unique_id=146459556]
+custom_minimum_size = Vector2(3, 3)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer" unique_id=627733803]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=71240140]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_upgwv")
+text = "CurrentDrones = 2
+DroneCapacity = 3
+TotalGas = 78 
+MultiplyAnswer = ____ / (____ * ____)
+print(MultiplyAnswer)
+AnswerBank : [CurrentDrones, 13, DroneCapacity, TotalGas]
+***Write as an equation***"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1886152806]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_upgwv")
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=2057591754]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.49411765, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("5_pdcj1")
+text = "CONFIRM
+"
+
+[node name="WrongAnswerPopUp" type="CanvasLayer" parent="CanvasLayer" unique_id=1944310394]
+visible = false
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/WrongAnswerPopUp" unique_id=1996548691]
+custom_minimum_size = Vector2(2, 0)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -162.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0003205227
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2" unique_id=2048133064]
+custom_minimum_size = Vector2(3, 3)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer" unique_id=1483402610]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=725502854]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_upgwv")
+theme_override_font_sizes/font_size = 21
+text = "Uh Oh! Looks like you are incorrect. What would you like to do?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HelpButton" type="Button" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=883299557]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.49411765, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("5_pdcj1")
+theme_override_font_sizes/font_size = 20
+text = "HELP
+"
+
+[node name="TryAgainButton" type="Button" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1218673933]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.49411765, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("5_pdcj1")
+theme_override_font_sizes/font_size = 20
+text = "TRY AGAIN
+"
