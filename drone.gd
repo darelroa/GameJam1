@@ -1,8 +1,8 @@
 extends Area2D
 
 @onready var ui_prompt = $CanvasLayer/QuestionUI
-@onready var answer_input = $CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer/LineEdit
-@onready var submit_button = $CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer/Button
+@onready var answer_input = $CanvasLayer/QuestionUI/PanelContainer/MarginContainer/VBoxContainer/LineEdit
+@onready var submit_button = $CanvasLayer/QuestionUI/PanelContainer/MarginContainer/VBoxContainer/Button
 
 @onready var wrong_popup = $CanvasLayer/WrongAnswerPopUp
 @onready var help_button = $CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer/HelpButton

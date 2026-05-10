@@ -79,31 +79,14 @@ position = Vector2(1071.4758, 413.45367)
 position = Vector2(1071, 416.00003)
 scale = Vector2(0.065999985, 0.052000016)
 
-[node name="Label" parent="drone/CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(675215459, 400027443) index="0" unique_id=931931771]
-text = "battery = 37 
-battery =  battery + __
-print(battery)"
-
-[node name="HelpButton" parent="drone/CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(675215459, 758262351) index="1" unique_id=552480753]
-process_mode = 3
-
-[node name="TryAgainButton" parent="drone/CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(675215459, 758262351) index="2" unique_id=1673574504]
-process_mode = 3
+[node name="WrongAnswerPopUp" parent="drone/CanvasLayer" parent_id_path=PackedInt32Array(675215459, 1193839404) index="1" unique_id=1953264528]
+visible = false
 
 [node name="drone_2" parent="." unique_id=905618168 instance=ExtResource("5_v32oq")]
 position = Vector2(292, 463)
 
 [node name="Sprite2D" parent="drone_2" index="1" unique_id=1583280422]
 position = Vector2(1.1920929e-07, -2)
-
-[node name="Label" parent="drone_2/CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(905618168, 627733803) index="0" unique_id=71240140]
-text = "CurrentDrones = 2
-DroneCapacity = 3
-TotalGas = 78 
-MultiplyAnswer = ____ / (____ * ____)
-print(MultiplyAnswer)
-AnswerBank : [CurrentDrones, 13, DroneCapacity, TotalGas]
-***Write as an equation with no spaces***"
 
 [node name="Label" parent="drone_2/CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(905618168, 1483402610) index="0" unique_id=725502854 groups=["player"]]
 
@@ -183,4 +166,6 @@ shape = SubResource("RectangleShape2D_ykihc")
 one_way_collision = true
 
 [editable path="drone"]
+[editable path="drone/CanvasLayer/QuestionUI"]
 [editable path="drone_2"]
+[editable path="drone_2/CanvasLayer/QuestionUI"]
