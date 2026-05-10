@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cptguilv22erh"]
+
+[ext_resource type="PackedScene" uid="uid://wlwnvf2npm86" path="res://assets/healthycoral.tscn" id="1_kkxlp"]
+
+[node name="healthycoral" unique_id=1085955529 instance=ExtResource("1_kkxlp")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=90821670]
+z_index = 5
+scale = Vector2(0.3, 0.3)

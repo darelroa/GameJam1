@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cxhaslsi3bfrq"]
+
+[ext_resource type="Texture2D" uid="uid://bg623kyflgym2" path="res://assets/sprites/objects/bleachedcoral.png" id="1_rwrjn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rwrjn"]
+
+[node name="bleached" type="Node2D" unique_id=37718124]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=363223205]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_rwrjn")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1086574851]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1094234484]
+position = Vector2(0, 15.999999)
+scale = Vector2(3.5, 3.5)
+shape = SubResource("CircleShape2D_rwrjn")
