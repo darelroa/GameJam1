@@ -8,7 +8,6 @@ extends Area2D
 @onready var help_button = $CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer/HelpButton
 @onready var try_again_button = $CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer/TryAgainButton
 
-
 var is_active = true
 
 func _ready():
@@ -17,8 +16,12 @@ func _ready():
 	answer_input.text_submitted.connect(check_answer)
 	help_button.pressed.connect(_on_help_pressed)
 	try_again_button.pressed.connect(_on_try_again_pressed)
-	
-func _on_body_entered(body):
+	ui_prompt.process_mode = Node.PROCESS_MODE_ALWAYS
+	wrong_popup.process_mode = Node.PROCESS_MODE_ALWAYS
+
+
+
+func _on_body_entered(body): 
 	if body.name =='player1' and is_active:
 		show_question()
 
@@ -51,6 +54,9 @@ func _on_try_again_pressed():
 
 func level_up_drone():
 	var tween = create_tween()
-	tween.tween_property(self, 'position:y', position.y - 60, 1.5)
+	tween.tween_property(self, 'global_position', Vector2(global_position.x, global_position.y - 60), 1.5)
+	await tween.finished
 	
+
+
 	
