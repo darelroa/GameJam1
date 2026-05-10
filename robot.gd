@@ -16,7 +16,9 @@ func _ready() -> void:
 	dialogue.visible = false
 	context_label.text = dialogue_text
 	task_label.text = task_text
+	context_label.visible = true
 	task_label.visible = false
+	next_button.pressed.connect(advance)
 
 func _on_input_event(_viewport, event, _shape_idx) -> void:
 	if event is InputEventMouseButton and event.pressed:
@@ -29,6 +31,7 @@ func advance() -> void:
 		State.CLOSED:
 			dialogue.visible = true
 			context_label.visible = true
+			task_label.visible = false
 			current_state = State.CONTEXT
 		State.CONTEXT:
 			context_label.visible = false 

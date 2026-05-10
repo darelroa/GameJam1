@@ -23,6 +23,16 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wt7ew"]
 size = Vector2(69, 65)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wt7ew"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dgmu8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uasak"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_moep4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0y05v"]
+
 [node name="robot" type="Area2D" unique_id=1256268370]
 position = Vector2(-7, -9)
 script = ExtResource("1_wt7ew")
@@ -62,25 +72,34 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ContextLabel" type="Label" parent="DialogueBubble/Control/Panel" unique_id=607035083]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="TaskLabel" type="Label" parent="DialogueBubble/Control/Panel" unique_id=772947692]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="DialogueBubble/Control/Panel" unique_id=1858606581]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wt7ew")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dgmu8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uasak")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_moep4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0y05v")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="pressed" from="DialogueBubble/Control/Panel/Button" to="." method="advance"]
