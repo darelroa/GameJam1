@@ -8,7 +8,11 @@ Debug the Earth combines programming education with environmental awareness. Pla
 
 - **Level 1**: Recharge drones and jump across platforms
 - **Level 2**: Sort trash into correct bins using if-elif-else logic
-- **Level 3**: Restore coral reefs underwater
+- **Level 3**: Restore coral reefs underwater 
+
+(level 3 is incomplete...)
+
+Puzzle answers are written below!
 
 ## Controls
 
@@ -48,10 +52,21 @@ Open `project.godot` in Godot Engine and press F5 to run.
 
 **Font**: Pixel Operator 8
 
-**Art**: All pixel artwork created with procreate by Eric, Mia and Bhoomini
+**Art**: All pixel artwork created with procreate by Eric, Mia and Bhoomini :)
+
+## Puzzle Answers
+
+Drones:
+1. 63
+2. TotalGas/(CurrentDrones*DroneCapacity)
+
+Trash
+1. if, print("This belongs in the recycling bin!")
+2. elif, print("This belongs in the general waste bin!")
+3. else, print("This belongs in the organic waste bin!")
+
 
 ## Tech Stack
-
 - Godot Engine 4.6
 - GDScript
 - Original pixel art assets

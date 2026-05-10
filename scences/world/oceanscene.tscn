@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://cbjnox58whusp"]
+
+[ext_resource type="Texture2D" uid="uid://bghnarfe8nfo0" path="res://assets/sprites/leveldesign/oceanbackground.png" id="1_1wxde"]
+[ext_resource type="PackedScene" uid="uid://b8tmlqowjcj36" path="res://assets/sprites/objects/sandplatform.tscn" id="2_1wxde"]
+[ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="2_82s3w"]
+[ext_resource type="PackedScene" uid="uid://wlwnvf2npm86" path="res://assets/healthycoral.tscn" id="3_82s3w"]
+[ext_resource type="Texture2D" uid="uid://cji8r3sg8r8mv" path="res://assets/sprites/objects/pinkcoral.png" id="4_21t4p"]
+[ext_resource type="Texture2D" uid="uid://c8a724p173rwp" path="res://assets/sprites/objects/seaweedcoral.png" id="5_b1hwk"]
+[ext_resource type="PackedScene" uid="uid://cu66kh80qj2vy" path="res://assets/sprites/objects/sandx.tscn" id="6_f2prl"]
+[ext_resource type="PackedScene" uid="uid://cxhaslsi3bfrq" path="res://assets/sprites/objects/bleached.tscn" id="8_pehl3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pehl3"]
+size = Vector2(20, 102.59999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2prl"]
+size = Vector2(13.300011, 96.649994)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_egavr"]
+
+[node name="oceanscene" type="Node2D" unique_id=1225173053]
+
+[node name="leftwall" type="StaticBody2D" parent="." unique_id=902238344]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftwall" unique_id=1227563208]
+position = Vector2(-87.00001, 482)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_pehl3")
+
+[node name="rightwall" type="StaticBody2D" parent="." unique_id=1620534447]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightwall" unique_id=1336882483]
+position = Vector2(1340, 459)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_f2prl")
+
+[node name="Openingscenebackground" type="Sprite2D" parent="." unique_id=1673265407]
+position = Vector2(613, 479.99997)
+scale = Vector2(0.73332655, 0.63399994)
+texture = ExtResource("1_1wxde")
+
+[node name="oceanpaltform" parent="Openingscenebackground" unique_id=966743753 instance=ExtResource("2_1wxde")]
+position = Vector2(-428.18576, 550.47327)
+scale = Vector2(0.5, 0.5)
+
+[node name="oceanpaltform2" parent="Openingscenebackground" unique_id=593825075 instance=ExtResource("2_1wxde")]
+position = Vector2(-139.0922, 485.80447)
+scale = Vector2(0.5, 0.5)
+
+[node name="oceanpaltform3" parent="Openingscenebackground" unique_id=501686030 instance=ExtResource("2_1wxde")]
+position = Vector2(264.54788, 433.75397)
+scale = Vector2(0.5, 0.5)
+
+[node name="player1" parent="." unique_id=1692882400 instance=ExtResource("2_82s3w")]
+position = Vector2(46, 645)
+collision_mask = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1678089417]
+position = Vector2(386, 833)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=983059861]
+position = Vector2(-30, 121)
+shape = SubResource("WorldBoundaryShape2D_egavr")
+
+[node name="ok" parent="." unique_id=1626769830 instance=ExtResource("3_82s3w")]
+position = Vector2(489, 718)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" parent="ok" index="0" unique_id=90821670]
+position = Vector2(224.99997, 954.9999)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("4_21t4p")
+
+[node name="healthycoral4" parent="." unique_id=460511376 instance=ExtResource("3_82s3w")]
+position = Vector2(489, 718)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" parent="healthycoral4" index="0" unique_id=90821670]
+position = Vector2(-389.99997, -340)
+scale = Vector2(0.85, 0.85)
+
+[node name="healthycoral7" parent="." unique_id=1085955529 instance=ExtResource("3_82s3w")]
+position = Vector2(489, 718)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" parent="healthycoral7" index="0" unique_id=90821670]
+position = Vector2(2354.9998, 584.99994)
+scale = Vector2(0.85, 0.85)
+
+[node name="healthycoral5" parent="." unique_id=977959143 instance=ExtResource("3_82s3w")]
+position = Vector2(489, 718)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" parent="healthycoral5" index="0" unique_id=90821670]
+position = Vector2(979.9999, 104.99997)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("5_b1hwk")
+
+[node name="healthycoral3" parent="." unique_id=103911142 instance=ExtResource("3_82s3w")]
+position = Vector2(489, 718)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" parent="healthycoral3" index="0" unique_id=90821670]
+position = Vector2(-1580, 949.99994)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("5_b1hwk")
+
+[node name="StaticBody2D" parent="healthycoral3" index="1" unique_id=696536788]
+position = Vector2(-54.999996, 34.999996)
+
+[node name="healthycoral6" parent="." unique_id=1902931563 instance=ExtResource("3_82s3w")]
+position = Vector2(489, 718)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" parent="healthycoral6" index="0" unique_id=90821670]
+position = Vector2(-1500, -69.99994)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("4_21t4p")
+
+[node name="StaticBody2D" parent="healthycoral6" index="1" unique_id=696536788]
+position = Vector2(-54.999996, 34.999996)
+
+[node name="bleached" parent="." unique_id=37718124 instance=ExtResource("8_pehl3")]
+position = Vector2(718, 867)
+
+[node name="bleached2" parent="." unique_id=116320059 instance=ExtResource("8_pehl3")]
+position = Vector2(944, 667)
+
+[node name="sandx1" parent="." unique_id=1824323393 instance=ExtResource("6_f2prl")]
+position = Vector2(327, 785)
+scale = Vector2(0.6, 0.6)
+
+[node name="sandx2" parent="." unique_id=272490989 instance=ExtResource("6_f2prl")]
+position = Vector2(534, 749)
+scale = Vector2(0.6, 0.6)
+
+[editable path="ok"]
+[editable path="healthycoral4"]
+[editable path="healthycoral7"]
+[editable path="healthycoral5"]
+[editable path="healthycoral3"]
+[editable path="healthycoral6"]
+[editable path="sandx1"]
+[editable path="sandx2"]

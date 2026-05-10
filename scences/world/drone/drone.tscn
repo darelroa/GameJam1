@@ -28,107 +28,122 @@ process_mode = 3
 [node name="QuestionUI" parent="CanvasLayer" unique_id=1893769574 instance=ExtResource("3_mlqjt")]
 visible = false
 
-[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/QuestionUI" unique_id=309201727]
-custom_minimum_size = Vector2(2, 0)
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -162.0
-offset_bottom = 162.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 0.0003205227
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="Label" parent="CanvasLayer/QuestionUI/PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1893769574, 174668568) index="0" unique_id=1329960114]
+theme_override_font_sizes/font_size = 21
+text = "battery = 37 
+battery = battery + __
+print(battery) "
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/QuestionUI/PanelContainer2" unique_id=1383406279]
-custom_minimum_size = Vector2(3, 3)
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+[node name="LineEdit" parent="CanvasLayer/QuestionUI/PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1893769574, 174668568) index="1" unique_id=1878234765]
+theme_override_font_sizes/font_size = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer" unique_id=400027443]
-layout_mode = 2
-theme_override_constants/separation = 15
-
-[node name="Label" type="Label" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=931931771]
-texture_filter = 1
-custom_minimum_size = Vector2(400, 200)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("4_bk3w3")
-text = "What is 2+2"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1287241972]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("4_bk3w3")
-alignment = 1
-
-[node name="Button" type="Button" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1895971750]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.69803923, 0.49411765, 0.60784316, 1)
-theme_override_fonts/font = ExtResource("5_vsd2c")
-text = "CONFIRM
-"
-
-[node name="WrongAnswerPopUp" type="CanvasLayer" parent="CanvasLayer" unique_id=394346213]
+[node name="WrongAnswerPopUp" type="CanvasLayer" parent="CanvasLayer" unique_id=1953264528]
 visible = false
 
-[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/WrongAnswerPopUp" unique_id=159975134]
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/WrongAnswerPopUp" unique_id=1308027037]
 custom_minimum_size = Vector2(2, 0)
-anchors_preset = 14
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -162.0
-offset_bottom = 162.0
+offset_left = -533.0
+offset_top = -255.08502
+offset_right = 533.0
+offset_bottom = 255.08496
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 0.0003205227
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2" unique_id=115934431]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2" unique_id=813901896]
 custom_minimum_size = Vector2(3, 3)
 layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer" unique_id=758262351]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer" unique_id=2031537443]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="Label" type="Label" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1991080386]
+[node name="Label" type="Label" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1938302762]
 texture_filter = 1
-custom_minimum_size = Vector2(400, 200)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bk3w3")
 theme_override_font_sizes/font_size = 21
 text = "Uh Oh! Looks like you are incorrect. What would you like to do?"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="HelpButton" type="Button" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=552480753]
-custom_minimum_size = Vector2(0, 50)
+[node name="HelpButton" type="Button" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1567871474]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.69803923, 0.49411765, 0.60784316, 1)
 theme_override_fonts/font = ExtResource("5_vsd2c")
 theme_override_font_sizes/font_size = 20
 text = "HELP
 "
 
-[node name="TryAgainButton" type="Button" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1673574504]
-custom_minimum_size = Vector2(0, 50)
+[node name="TryAgainButton" type="Button" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=920027302]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.69803923, 0.49411765, 0.60784316, 1)
 theme_override_fonts/font = ExtResource("5_vsd2c")
 theme_override_font_sizes/font_size = 20
 text = "TRY AGAIN
 "
+
+[node name="HelpScreen" type="CanvasLayer" parent="CanvasLayer" unique_id=213188395]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HelpScreen" unique_id=1812969841]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.34396
+offset_top = -258.484
+offset_right = 523.2366
+offset_bottom = 251.68585
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0003205227
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HelpScreen/PanelContainer" unique_id=401774734]
+custom_minimum_size = Vector2(3, 3)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HelpScreen/PanelContainer/MarginContainer" unique_id=1812981112]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CanvasLayer/HelpScreen/PanelContainer/MarginContainer/VBoxContainer" unique_id=1973667879]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_bk3w3")
+theme_override_font_sizes/font_size = 21
+text = "Print: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/HelpScreen/PanelContainer/MarginContainer/VBoxContainer" unique_id=872859499]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("5_vsd2c")
+text = "TRY AGAIN
+"
+
+[editable path="CanvasLayer/QuestionUI"]

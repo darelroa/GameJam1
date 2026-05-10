@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://cu66kh80qj2vy"]
+
+[ext_resource type="Script" uid="uid://djhr5cyp5v0ts" path="res://assets/sprites/objects/sandx.gd" id="1_4ywwy"]
+[ext_resource type="Texture2D" uid="uid://cdh3mxyigsep0" path="res://assets/sprites/objects/sandx.png" id="1_i3u26"]
+[ext_resource type="PackedScene" uid="uid://dlf6udbl2efiv" path="res://scences/world/drone/question_ui.tscn" id="2_8aepg"]
+[ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="3_4ywwy"]
+[ext_resource type="FontFile" uid="uid://dysj28cm65uu0" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_cuuyr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vjeoe"]
+
+[node name="Area2D" type="Area2D" unique_id=1824323393]
+script = ExtResource("1_4ywwy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1270269311]
+scale = Vector2(4.5, 4.5)
+shape = SubResource("CircleShape2D_vjeoe")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1026154530]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_i3u26")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1142329597]
+process_mode = 3
+
+[node name="QuestionUI" parent="CanvasLayer" unique_id=1893769574 instance=ExtResource("2_8aepg")]
+visible = false
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/QuestionUI" unique_id=1035129613]
+custom_minimum_size = Vector2(2, 0)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -162.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0003205227
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/QuestionUI/PanelContainer2" unique_id=1458629328]
+custom_minimum_size = Vector2(3, 3)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer" unique_id=1839272774]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=179132927]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4ywwy")
+text = "Task 7: 
+Word Bank: [if, reef, coral]
+for _____ in ____: 
+	print(\"lets plant one here!)
+
+make sure the answer is in this format: (ans1, ans2, ans3)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1990317792]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4ywwy")
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/QuestionUI/PanelContainer2/MarginContainer/VBoxContainer" unique_id=334049660]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.49411765, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("4_cuuyr")
+text = "CONFIRM
+"
+
+[node name="WrongAnswerPopUp" type="CanvasLayer" parent="CanvasLayer" unique_id=1543900708]
+visible = false
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/WrongAnswerPopUp" unique_id=995119781]
+custom_minimum_size = Vector2(2, 0)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -162.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0003205227
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2" unique_id=735808079]
+custom_minimum_size = Vector2(3, 3)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer" unique_id=1424049486]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=278573823]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4ywwy")
+theme_override_font_sizes/font_size = 21
+text = "Uh Oh! Looks like you are incorrect. What would you like to do?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HelpButton" type="Button" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1271734294]
+process_mode = 3
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.49411765, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("4_cuuyr")
+theme_override_font_sizes/font_size = 20
+text = "HELP
+"
+
+[node name="TryAgainButton" type="Button" parent="CanvasLayer/WrongAnswerPopUp/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1044018636]
+process_mode = 3
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.49411765, 0.60784316, 1)
+theme_override_fonts/font = ExtResource("4_cuuyr")
+theme_override_font_sizes/font_size = 20
+text = "TRY AGAIN
+"
