@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://dysj28cm65uu0" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_vsd2c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4w0wj"]
-size = Vector2(149.57477, 49.81491)
+size = Vector2(128.96065, 45.158867)
 
 [node name="drone" type="Area2D" unique_id=675215459]
 script = ExtResource("1_4w0wj")
@@ -19,8 +19,7 @@ scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_4w0wj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=444903333]
-position = Vector2(1067.5, 414.5)
-scale = Vector2(0.08, 0.061)
+scale = Vector2(0.07, 0.053)
 texture = ExtResource("2_4w0wj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1193839404]
