@@ -82,6 +82,6 @@ shape = SubResource("RectangleShape2D_kmj0d")
 
 [node name="robot" parent="." unique_id=1608089942 instance=ExtResource("8_y6sbr")]
 process_mode = 3
-position = Vector2(1064, -63)
+position = Vector2(1198, 117)
 dialogue_text = "Remember, an if-elif-else statement checks whether a condition is true!Structure:if <condition 1>:    <run this code...>elif <condition 2>:    <run this code...>else:    <run this code...>"
 task_text = "Walk up to each trash bag and press E to interact.Sort each bag into the correct bin by completing the if-elif-else statement!Click me to close this and begin!"
