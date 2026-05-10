@@ -16,7 +16,6 @@ var correct_answer1: String = ""
 var correct_answer2: String = ""
 var calling_bag = null
 
-# Tracks the hint state: 0 = no hint, 1 = hint shown, 2 = answer revealed
 var hint_state: int = 0
 
 func _ready() -> void:
@@ -34,7 +33,7 @@ func _ready() -> void:
 	quit_button.add_theme_font_override("font", font_bold)
 
 	panel.visible = false
-	hint_button.visible = false  # hint button only appears after a wrong answer
+	hint_button.visible = false  
 
 	submit_button.pressed.connect(_on_submit_pressed)
 	hint_button.pressed.connect(_on_hint_button_pressed)
@@ -54,7 +53,6 @@ func open(prompt_text: String, fixed_line: String, placeholder1: String,
 	line_edit1.text = ""
 	line_edit2.text = ""
 
-	# Reset all hint/answer/error state every time the dialog opens
 	error_label.visible = false
 	hint_label.visible = false
 	answer_label.visible = false
@@ -84,12 +82,11 @@ func _on_submit_pressed() -> void:
 			error_label.text = "The print statement is incorrect. Try again!"
 		error_label.visible = true
 
-		# Show the hint button after the first wrong attempt
 		hint_button.visible = true
 
 func _on_hint_button_pressed() -> void:
 	if hint_state == 0:
-		# First press: show a hint describing what to write
+		
 		hint_label.text = "Hint: The first blank is one of the keywords if/elif/else.
 		Which one comes first? Second? Third?\n" \
 						+ "The second blank should be in the format print(\"...\")"
@@ -98,15 +95,15 @@ func _on_hint_button_pressed() -> void:
 		hint_state = 1
 
 	elif hint_state == 1:
-		# Second press: reveal the actual answers as text
+		
 		answer_label.text = "Answer:\n  Line 1: %s\n  Line 2: %s" \
 							% [correct_answer1, correct_answer2]
 		answer_label.visible = true
-		hint_button.visible = false  # hide the button once answer is shown
+		hint_button.visible = false  
 		hint_state = 2
 
 func _on_quit_pressed() -> void:
-	# Close the dialog and unfreeze the game without solving the bag
+	
 	panel.visible = false
 	get_tree().paused = false
 

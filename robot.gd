@@ -1,7 +1,7 @@
 extends Area2D
 
-@export var dialogue_text: String = ""
-@export var task_text: String = ""
+@export_multiline var dialogue_text: String = ""
+@export_multiline var task_text: String = ""
 
 @onready var dialogue = $DialogueBubble
 @onready var context_label = $DialogueBubble/Control/Panel/ContextLabel

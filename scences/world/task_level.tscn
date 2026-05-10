@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://b1tfei4txxpry" path="res://scences/world/objects/trash_bag.tscn" id="6_xbi5j"]
 [ext_resource type="PackedScene" uid="uid://b7sd7cyes8c6x" path="res://scences/ui/task_dialogue.tscn" id="7_nry0w"]
 [ext_resource type="PackedScene" uid="uid://dcn58qravf44u" path="res://scences/entities/robot.tscn" id="8_y6sbr"]
+[ext_resource type="FontFile" uid="uid://dysj28cm65uu0" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_ji8q2"]
+[ext_resource type="PackedScene" uid="uid://brckopgwwyx8y" path="res://scences/portal.tscn" id="11_qbsia"]
+[ext_resource type="Texture2D" uid="uid://btlrfmyxroe4i" path="res://assets/sprites/objects/IMG_0694.PNG" id="12_xbi5j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3a2um"]
 size = Vector2(1281, 70)
@@ -24,6 +27,17 @@ position = Vector2(640.1666, 479.875)
 scale = Vector2(0.64016664, 0.6401667)
 texture = ExtResource("1_kmj0d")
 
+[node name="Portal" parent="." unique_id=1329248294 instance=ExtResource("11_qbsia")]
+position = Vector2(1219, 810)
+collision_layer = 256
+target_scene = "res://scences/world/task_level.tscn"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1203429755]
+position = Vector2(73.25001, 822.25006)
+scale = Vector2(0.062250014, 0.062250014)
+texture = ExtResource("12_xbi5j")
+flip_h = true
+
 [node name="ground" type="StaticBody2D" parent="." unique_id=1751011629]
 collision_layer = 256
 
@@ -32,17 +46,17 @@ position = Vector2(640.5, 925)
 shape = SubResource("RectangleShape2D_3a2um")
 
 [node name="BinYellow" type="Sprite2D" parent="." unique_id=501261367]
-position = Vector2(984, 808)
+position = Vector2(800, 808)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("2_y6sbr")
 
 [node name="BinRed" type="Sprite2D" parent="." unique_id=174819291]
-position = Vector2(1093, 808)
+position = Vector2(950, 808)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("4_ji8q2")
 
 [node name="BinGreen" type="Sprite2D" parent="." unique_id=1879479631]
-position = Vector2(1201, 808)
+position = Vector2(1100, 808)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("3_hbk87")
 
@@ -50,22 +64,22 @@ texture = ExtResource("3_hbk87")
 position = Vector2(77, 849)
 
 [node name="TrashBagYellow" parent="." unique_id=150704496 instance=ExtResource("6_xbi5j")]
-position = Vector2(401, 833)
+position = Vector2(300, 833)
 scale = Vector2(0.06, 0.06)
 collision_layer = 1
-bin_position = Vector2(984, 670)
+bin_position = Vector2(800, 670)
 
 [node name="TrashBagRed" parent="." unique_id=314912483 instance=ExtResource("6_xbi5j")]
-position = Vector2(603.00006, 833)
+position = Vector2(450, 833)
 scale = Vector2(0.06, 0.06)
 bag_colour = "red"
-bin_position = Vector2(1093, 670)
+bin_position = Vector2(950, 670)
 
 [node name="TrashBagGreen" parent="." unique_id=1188263541 instance=ExtResource("6_xbi5j")]
-position = Vector2(804, 833)
+position = Vector2(670, 833)
 scale = Vector2(0.06, 0.06)
 bag_colour = "green"
-bin_position = Vector2(1201, 670)
+bin_position = Vector2(1100, 670)
 
 [node name="TaskDialog" parent="." unique_id=1800230298 instance=ExtResource("7_nry0w")]
 
@@ -80,8 +94,29 @@ shape = SubResource("RectangleShape2D_kmj0d")
 position = Vector2(-24, 611)
 shape = SubResource("RectangleShape2D_kmj0d")
 
+[node name="Label" type="Label" parent="." unique_id=7972742]
+offset_left = 908.0
+offset_top = 86.0
+offset_right = 1188.0
+offset_bottom = 109.0
+theme_override_fonts/font = ExtResource("9_ji8q2")
+text = "click for help -->"
+
 [node name="robot" parent="." unique_id=1608089942 instance=ExtResource("8_y6sbr")]
 process_mode = 3
-position = Vector2(1198, 117)
-dialogue_text = "Remember, an if-elif-else statement checks whether a condition is true!Structure:if <condition 1>:    <run this code...>elif <condition 2>:    <run this code...>else:    <run this code...>"
-task_text = "Walk up to each trash bag and press E to interact.Sort each bag into the correct bin by completing the if-elif-else statement!Click me to close this and begin!"
+position = Vector2(1196, 92)
+dialogue_text = "Remember, an if-elif-else statement checks conditions
+
+Structure:
+
+if <condition 1 is true>:
+    do this...
+elif <condition 2 is true>:
+    do this...
+else:
+	do this..."
+task_text = "Walk up to each trash bag and press E to interact. 
+
+Sort each bag into the correct bin by completing the if-elif-else statement!
+
+Click me to close this and begin!"
