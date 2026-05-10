@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://brckopgwwyx8y"]
+
+[ext_resource type="Texture2D" uid="uid://btlrfmyxroe4i" path="res://assets/sprites/objects/IMG_0694.PNG" id="2_1m71y"]
+[ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="3_ao41h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6pxl"]
+size = Vector2(47, 139)
+
+[node name="Portal" type="Area2D" unique_id=1329248294]
+position = Vector2(-7, -14)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1686311727]
+position = Vector2(-4.2500305, 1.25)
+scale = Vector2(0.07325003, 0.07325003)
+texture = ExtResource("2_1m71y")
+
+[node name="Label" type="Label" parent="." unique_id=1352453412]
+offset_left = -80.0
+offset_top = -103.0
+offset_right = 94.0
+offset_bottom = -84.0
+theme_override_fonts/font = ExtResource("3_ao41h")
+theme_override_font_sizes/font_size = 12
+text = "Press [E] to enter"
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1305548898]
+position = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_y6pxl")

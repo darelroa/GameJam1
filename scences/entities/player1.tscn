@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://d3rn8mgok8v4"]
 
 [ext_resource type="Script" uid="uid://ms7uir4jipn0" path="res://scripts/player.gd" id="1_hrut5"]
-[ext_resource type="SpriteFrames" uid="uid://dq8pvs640rdqr" path="res://assets/sprites/playercharacter1/player1.tres" id="2_uo8m2"]
+[ext_resource type="SpriteFrames" uid="uid://dq8pvs640rdqr" path="res://assets/sprites/movement/player1.tres" id="2_uo8m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8guk"]
 size = Vector2(32, 32)
 
-[node name="player1" type="CharacterBody2D" unique_id=1692882400]
+[node name="player1" type="CharacterBody2D" unique_id=1692882400 groups=["player"]]
 collision_mask = 256
 script = ExtResource("1_hrut5")
 
