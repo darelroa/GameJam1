@@ -65,6 +65,8 @@ Trash
 2. elif, print("This belongs in the general waste bin!")
 3. else, print("This belongs in the organic waste bin!")
 
+
+## Tech Stack
 - Godot Engine 4.6
 - GDScript
 - Original pixel art assets
