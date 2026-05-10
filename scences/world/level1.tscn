@@ -51,9 +51,30 @@ position = Vector2(417.00003, 529)
 scale = Vector2(0.20399997, 0.17300001)
 texture = ExtResource("4_saiqn")
 
+[node name="Label" type="Label" parent="." unique_id=485849550]
+offset_left = 474.0
+offset_top = 700.0
+offset_right = 714.0
+offset_bottom = 756.0
+theme_override_fonts/font = ExtResource("7_v0m7i")
+text = "Try jumping on top 
+of the boxes!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1964447185]
+offset_left = 48.0
+offset_top = 695.0
+offset_right = 288.0
+offset_bottom = 751.0
+theme_override_fonts/font = ExtResource("7_v0m7i")
+text = "WASD
+to move"
+horizontal_alignment = 1
+
 [node name="Portal" parent="." unique_id=1329248294 instance=ExtResource("9_ykihc")]
 position = Vector2(76, 375)
 collision_layer = 256
+cutscene_slides = Array[String](["res://assets/sprites/codeclass/classif.PNG", "res://assets/sprites/cutscene/trashcutscene.png"])
 target_scene = "res://scences/world/task_level.tscn"
 
 [node name="Sprite2D" parent="Portal" index="0" unique_id=1686311727]
@@ -196,26 +217,6 @@ offset_right = 1079.0
 offset_bottom = 129.0
 theme_override_fonts/font = ExtResource("7_v0m7i")
 text = "click for help -->"
-
-[node name="Label" type="Label" parent="." unique_id=485849550]
-offset_left = 474.0
-offset_top = 700.0
-offset_right = 714.0
-offset_bottom = 756.0
-theme_override_fonts/font = ExtResource("7_v0m7i")
-text = "Try jumping on top 
-of the boxes!"
-horizontal_alignment = 1
-
-[node name="Label2" type="Label" parent="." unique_id=1964447185]
-offset_left = 48.0
-offset_top = 695.0
-offset_right = 288.0
-offset_bottom = 751.0
-theme_override_fonts/font = ExtResource("7_v0m7i")
-text = "WASD
-to move"
-horizontal_alignment = 1
 
 [editable path="Portal"]
 [editable path="drone"]
