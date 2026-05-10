@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cql748ks2lj3t"]
+
+[ext_resource type="FontFile" uid="uid://dysj28cm65uu0" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_7ek3v"]
+[ext_resource type="FontFile" uid="uid://bjba4tjgngw1x" path="res://assets/fonts/PixelOperator8.ttf" id="2_p0mhh"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=186278400]
+
+[node name="Panel" type="Panel" parent="." unique_id=1955269337]
+custom_minimum_size = Vector2(500, 150)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1231081695]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -612.0
+offset_top = -46.5
+offset_right = 612.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="SpeakerLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1178668124]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_7ek3v")
+text = "Robot"
+
+[node name="DialogueLabel" type="Label" parent="Panel/VBoxContainer" unique_id=2051648041]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="ContinueLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1984849046]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_p0mhh")
+text = "Press Enter or click to continue..."

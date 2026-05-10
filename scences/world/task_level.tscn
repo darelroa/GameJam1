@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://qghyu8t7kvfr"]
 
+[ext_resource type="Script" uid="uid://d1s3n3nldbl27" path="res://scripts/task_level.gd" id="1_ji8q2"]
 [ext_resource type="Texture2D" uid="uid://dyqo0jy1jk8mb" path="res://assets/sprites/leveldesign/trash_background_scene.png" id="1_kmj0d"]
 [ext_resource type="Texture2D" uid="uid://ddqknd8iu8hh7" path="res://assets/sprites/trash/IMG_0700.PNG" id="2_y6sbr"]
 [ext_resource type="Texture2D" uid="uid://c217ryaliigpq" path="res://assets/sprites/trash/IMG_0699.PNG" id="3_hbk87"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d3rn8mgok8v4" path="res://scences/entities/player1.tscn" id="5_qbsia"]
 [ext_resource type="PackedScene" uid="uid://b1tfei4txxpry" path="res://scences/world/objects/trash_bag.tscn" id="6_xbi5j"]
 [ext_resource type="PackedScene" uid="uid://b7sd7cyes8c6x" path="res://scences/ui/task_dialogue.tscn" id="7_nry0w"]
+[ext_resource type="PackedScene" uid="uid://dcn58qravf44u" path="res://scences/entities/robot.tscn" id="8_y6sbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3a2um"]
 size = Vector2(1281, 70)
@@ -15,6 +17,7 @@ size = Vector2(1281, 70)
 size = Vector2(49, 695)
 
 [node name="TaskLevel" type="Node2D" unique_id=1268156440]
+script = ExtResource("1_ji8q2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2099277107]
 position = Vector2(640.1666, 479.875)
@@ -76,3 +79,9 @@ shape = SubResource("RectangleShape2D_kmj0d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1694514698]
 position = Vector2(-24, 611)
 shape = SubResource("RectangleShape2D_kmj0d")
+
+[node name="robot" parent="." unique_id=1608089942 instance=ExtResource("8_y6sbr")]
+process_mode = 3
+position = Vector2(1064, -63)
+dialogue_text = "Remember, an if-elif-else statement checks whether a condition is true!Structure:if <condition 1>:    <run this code...>elif <condition 2>:    <run this code...>else:    <run this code...>"
+task_text = "Walk up to each trash bag and press E to interact.Sort each bag into the correct bin by completing the if-elif-else statement!Click me to close this and begin!"
